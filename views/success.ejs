@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="Shortcut Icon" href="/images/image/doubanlogo.jpg" />
+  <link rel="stylesheet" type="text/css" href="/css/success.css">
+  <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
+  <script type="text/javascript" rel="stylesheet" src="/js/success.js"></script>
+  <title>豆瓣</title>
+ </head>
+ <body>
+  <div class="all">
+   <div class="header">
+    <div class="header-top">
+     <div class="header-top-left">
+      <ul>
+       <li><a href="">豆瓣</a></li>
+       <li><a href="">读书</a></li>
+       <li><a href="">电影</a></li>
+       <li><a href="">音乐</a></li>
+       <li><a href="">同城</a></li>
+       <li><a href="">小组</a></li>
+       <li><a href="">阅读</a></li>
+       <li><a href="">FM</a></li>
+       <li><a href="">东西</a></li>
+       <li><a href="">市集</a></li>
+       <li><a href="">更多</a></li>
+      </ul>
+     </div>
+     <div class="header-top-right">
+      <ul>
+       <li class="boxla01">
+        <a href="">下载豆瓣客户端</a>
+        <div class="box1">
+         <img src="/images/image/20170207221021.png">
+         <span><a class="no-hover" href="">Iphone </a>·<a class="no-hover" href=""> Android</a></span>
+        </div>
+       </li>
+       <li><a href="">提醒</a></li>
+       <li><a href="">豆邮</a></li>
+       <li class="boxla02">
+        <span id="boxclick"><%= asd.username %>的账号</span>
+        <div class="box2">
+         <ul>
+          <li><a href="/personal">个人主页</a></li>
+          <li><a href="">我的订单</a></li>
+          <li><a href="">我的钱包</a></li>
+          <li><a href="">帐号管理</a></li>
+          <li><a href="/logout">退出</a></li>
+         </ul>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="header-content">
+     <div class="main">
+      <div class="main-body">
+       <ul>
+        <li><a href="/success">首页</a></li>
+        <li><a href="">我的豆瓣</a></li>
+        <li><a href="">浏览发现</a></li>
+        <li><a href="">移动应用</a></li>
+        <li><a href="">游戏</a></li>
+        <li><a href="">线上活动</a></li>
+       </ul>
+      </div>
+     </div>
+     <div class="left">
+      <a href="/success"><img src="/images/image/title.png" /></a>
+     </div>
+     <div class="right">
+      <form method="" action="">
+       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img src="/images/image/search.png"></a>
+      </form>
+     </div>
+    </div>
+   </div>
+   <div class="center">
+    <div class="center-left">
+     <div class="center-left-top">
+      <ul>
+       <li><img src="/images/image/20170209125256.png" /><a href="">说句话</a></li>
+       <li><img src="/images/image/20170209125313.png" /><a href="">发照片</a></li>
+       <li><img src="/images/image/20170209125326.png" /><a href="">推荐网页</a></li>
+       <li><img src="/images/image/20170209125335.png" /><a href="/writeArticle">写日记</a></li>
+       <li><img src="/images/image/20170209125351.png" /><a href="">发布东西</a></li>
+       <li><a id="first" href="">首页设置</a></li>
+      </ul>
+     </div>
+     <div class="ss">
+      <input type="text" name="share" placeholder="分享生活点滴…">
+      <div class="pictopic">
+       <a href="" title="可传多张照片"><img src="/images/image/20170209125434.png" /></a>
+       <a href="" title="添加话题"><img src="/images/image/20170209125448.png" /></a>
+      </div>
+     </div>
+     <div class="addtopic"></div>
+     <div class="content">
+      <div class="personal">
+       <div class="personal-left">
+        <a href="" title="张秋寒"><img src="/images/image/20170209194426.png" /></a>
+       </div>
+       <div class="personal-right">
+        <div class="personal-right-top">
+         <a href="">张秋寒 </a><span>的日记:</span>
+        </div>
+        <div class="personal-right-con">
+         <div class="personal-right-content">
+          <h5><a href="">半夜缘</a></h5>
+          <p>1 好婆婆也有，只是象薇没遇到，也总有那么一部分女孩子遇不到。她时常想着，母亲总是爱女儿的，女儿学到了这份爱，因此也会再原模原样地爱自己的女儿。婆婆待儿媳不善，儿媳也就积恶成疾，...</p>
+        </div>
+        </div>
+        <div class="personal-right-footer">
+         <span>今天下午，来自 <a href="">热门精选</a></span>
+        </div>
+       </div>
+      </div>
+      <div class="personal">
+       <div class="personal-left">
+        <a href="" title="Eve"><img src="/images/image/20170209225109.png" /></a>
+       </div>
+       <div class="personal-right">
+        <div class="personal-right-top">
+         <a href="">Eve </a><span>的日记:</span>
+        </div>
+        <div class="personal-right-con">
+         <div class="personal-right-content" id="special">
+          <h5><a href="">旅行 | 去纽约听爵士乐，重温二十世纪的浪漫辉煌</a></h5>
+          <p>爵士乐可以称得上是“美国的古典乐” (America's classical music)。比起欧洲严谨、精致的古典乐，爵士乐要自由狂放得多。起源于十九世纪末的美国城镇，爵士乐在二十世纪逐渐迁徙到了大都市...</p>
+         </div>
+         <div class="picture">
+          <a href=""><img src="/images/image/20170209225338.png"></a>
+         </div>
+        </div>
+        <div class="personal-right-footer">
+         <span>今天下午，来自 <a href="">热门精选</a></span>
+        </div>
+       </div>
+      </div>
+      <div class="personal">
+       <div class="personal-left">
+        <a href="" title="四月"><img src="/images/image/20170209231502.png" /></a>
+       </div>
+       <div class="personal-right">
+        <div class="personal-right-top">
+         <a href="">四月 </a><span>的相册:</span>
+        </div>
+        <div class="personal-right-con">
+         <div class="personal-right-content">
+          <ul>
+           <li><a href=""><img src="/images/image/20170209231824.png" /></a></li>
+           <li><a href=""><img src="/images/image/20170209231842.png" /></a></li>
+           <li><a href=""><img src="/images/image/20170209231859.png" /></a></li>
+           <li><a href=""><img src="/images/image/20170209231919.png" /></a></li>
+          </ul>
+          <h5><a href="">蓝色的台湾</a></h5>
+          <div class="liking">
+           <div class="like" title="标为喜欢?">
+            <span>喜欢</span>
+           </div>
+           <div class="tag">
+            <span>标签：</span>
+            <span><a href="">摄影</a></span>
+            <span><a href="">自然</a></span>
+            <span><a href="">旅行</a></span>
+           </div>
+          </div>
+        </div>
+        </div>
+        <div class="personal-right-footer">
+         <span>今天下午，来自 <a href="">热门精选</a></span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="page">
+      <ul>
+       <li><a href=""><前页</a></li>
+       <li><a href="">1</a></li>
+       <li><a href="">2</a></li>
+       <li><a href="">3</a></li>
+       <li><a href="">4</a></li>
+       <li><a href="">5</a></li>
+       <li><a href="">6</a></li>
+       <li><a href="">7</a></li>
+       <li><a href="">8</a></li>
+       <li><a href="">9</a></li>
+       <li><a href="">10</a></li>
+       <li><a href="">后页></a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="center-right">
+     <div class="one">
+      <span class="stitle">豆瓣正在发生……</span>
+      <p><a href="">豆瓣2016年度游戏榜单新鲜出炉</a></p>
+      <p><a href="">第36届【香港金像奖】完整提名名单</a></p>
+     </div>
+     <div class="two">
+      <span class="stitle">热门话题……</span><span>(<a href="">更多</a>)</span>
+      <ul>
+       <li>
+        <a href="">拖延症</a><br>
+        <span>明天再点开这个话题也不晚 · 1619条内容</span>
+       </li>
+       <li>
+        <a href="">动物园</a><br>
+        <span>动物园的正确打开方式 · 167条内容</span>
+       </li>
+       <li>
+        <a href="">故乡</a><br>
+        <span>佳节归乡，离前一瞥 · 957条内容</span>
+       </li>
+       <li>
+        <a href="">走亲访友异闻录</a><br>
+        <span>聊聊饭局酒桌上的奇妙见闻 · 642条内容</span>
+       </li>
+       <li>
+        <a href="">婚姻关系</a><br>
+        <span>情感、伦理与契约 · 339条内容</span>
+       </li>
+       <li>
+        <a href="">上一辈的困境</a><br>
+        <span>用理解代替批判 · 335条内容</span>
+       </li>
+       <li>
+        <a href="">> 申请创建小站</a>
+       </li>
+      </ul>
+      <a href="" id="pic"><img src="/images/image/20170209191143.png"></a>
+     </div>
+     <div class="two">
+      <span class="stitle">热门活动……</span><span>(<a href="">换一个</a>)</span><br>
+      <p><span class="brand">品牌 </span><a href="" id="brand">#给老爸支招讨好老妈# 急在线等！</a></p>
+      <a href="" id="pic" class="explain"><img src="/images/image/20170209192424.png"></a><br>
+      <span class="time">时间：1月28日-2月10日</span><br>
+      <span class="time">参加：99</span><br>
+      <a href="" id="more">>更多线上活动</a>
+     </div>
+    </div>
+   </div>
+   <div class="footer">
+    <hr>
+    <div class="footer-left">
+     <p>© 2005－2016 douban.com, all rights reserved北京豆网科技有限公司</p>
+    </div>
+    <div class="footer-right">
+     <p>
+      <a href="">关于豆瓣</a>·
+      <a href="">在豆瓣工作</a>·
+      <a href="">联系我们</a>·
+      <a href="">免责声明</a>·
+      <a href="">帮助中心</a>·
+      <a href="">开发者</a>·
+      <a href="">移动应用</a>·
+      <a href="">豆瓣广告</a>
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

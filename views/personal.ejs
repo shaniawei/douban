@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="Shortcut Icon" href="/images/perimage/doubanlogo.jpg" />
+  <link rel="stylesheet" type="text/css" href="/css/personal.css">
+  <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
+  <script type="text/javascript" rel="stylesheet" src="/js/personal.js"></script>
+  <title>alair</title>
+ </head>
+ <body>
+  <div class="all">
+   <div class="header">
+    <div class="header">
+    <div class="header-top">
+     <div class="header-top-left">
+      <ul>
+       <li><a href="">豆瓣</a></li>
+       <li><a href="">读书</a></li>
+       <li><a href="">电影</a></li>
+       <li><a href="">音乐</a></li>
+       <li><a href="">同城</a></li>
+       <li><a href="">小组</a></li>
+       <li><a href="">阅读</a></li>
+       <li><a href="">FM</a></li>
+       <li><a href="">东西</a></li>
+       <li><a href="">市集</a></li>
+       <li><a href="">更多</a></li>
+      </ul>
+     </div>
+     <div class="header-top-right">
+      <ul>
+       <li class="boxla01">
+        <a href="">下载豆瓣客户端</a>
+        <div class="box1">
+         <img src="/images/perimage/20170207221021.png">
+         <span><a class="no-hover" href="">Iphone </a>·<a class="no-hover" href=""> Android</a></span>
+        </div>
+       </li>
+       <li><a href="">提醒</a></li>
+       <li><a href="">豆邮</a></li>
+       <li class="boxla02">
+        <span id="boxclick"><%= asd.username %></span>
+        <div class="box2">
+         <ul>
+          <li><a href="">个人主页</a></li>
+          <li><a href="">我的订单</a></li>
+          <li><a href="">我的钱包</a></li>
+          <li><a href="">帐号管理</a></li>
+          <li><a href="/logout">退出</a></li>
+         </ul>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="header-content">
+     <div class="main">
+      <div class="main-body">
+       <ul>
+        <li><a href="/success">首页</a></li>
+        <li><a href="">我的豆瓣</a></li>
+        <li><a href="">浏览发现</a></li>
+        <li><a href="">移动应用</a></li>
+        <li><a href="">游戏</a></li>
+        <li><a href="">线上活动</a></li>
+       </ul>
+      </div>
+     </div>
+     <div class="left">
+      <a href="/success"><img src="/images/perimage/title.png" /></a>
+     </div>
+     <div class="right">
+      <form method="" action="">
+       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img src="/images/perimage/search.png"></a>
+      </form>
+     </div>
+    </div>
+   </div>
+   </div>
+   <div class="center">
+    <div class="center-left">
+     <div class="center-left-top">
+      <div class="center-left-top-left">
+       <a href="" id="headpic"><img src="/images/perimage/20170213154639.png"></a>
+      </div>
+      <div class="center-left-top-right">
+       <span class="headname"><%= asd.username %></span><br>
+       <span class="sign">
+          <% if(asd.reserve){  %>
+          <%= asd.reserve %>
+          <% }else{ %>
+          (添加签名档)
+          <% } %>
+      </span>
+       <div class="box3">
+        <input type="text" name="signtext">
+        <span id="alter">修改</span>
+        <span id="cancel">取消</span>
+       </div>
+      </div>
+     </div>
+     <div class="list">
+      <ul>
+       <li><a href="/personal">我的主页</a></li>
+       <li><a href="">广播</a></li>
+       <li><a href="">相册</a></li>
+       <li><a href="">日记</a></li>
+       <li><a href="">喜欢</a></li>
+       <li><a href="">豆列</a></li>
+       <li><a href="">设置</a></li>
+      </ul>
+     </div>
+     <div class="set">
+      <p>alair，这里是你的主页，用来展示你的生活和发现，也是别人认识你的地方。<br>
+完善你的个人资料，开始全新的豆瓣之旅吧。</p>
+      <ol>
+       <li><a id="uploadpic" href="">上传头像</a></li>
+       <li><a href="">写一段自我介绍</a></li>
+      </ol>
+      <p>以上选项也可以在页面右上角你的帐号中找到。</p>
+     </div>
+     <div class="mine">
+      <div class="diary">
+       <h4>我的日记……</h4><span>(<a href="">全部</a>)</span>
+       <div class="write">
+        <a href="/writeArticle"><img src="/images/perimage/add.jpg"><span>写日记</span></a>
+       </div>
+      </div>
+      <p>在豆瓣上写日记，记录自己的生活、想法。</p>
+     </div>
+     <div class="mine">
+      <div class="diary">
+       <h4>我的相册……</h4><span>(<a href="">创建0 </a> · <a href=""> 关注0</a>)</span>
+       <div class="write">
+        <a href=""><img src="/images/perimage/add.jpg"><span>新建相册</span></a>
+       </div>
+       <div class="write" id="release">
+        <a href=""><img src="/images/perimage/add.jpg"><span>发照片</span></a>
+       </div>
+      </div>
+      <p>可以有自己的相册来存放照片了。</p>
+     </div>
+     <div class="mine">
+      <div class="diary">
+       <h4>留言板……</h4><span>(<a href="">全部</a>)</span>
+      </div>
+      <form method="" action="">
+       <textarea></textarea>
+       <input type="submit" name="words" value="留言">
+      </form>
+     </div>
+    </div>
+    <div class="center-right">
+     <div class="one">
+      <div class="pichead">
+       <img src="/images/perimage/20170213154639.png">
+      </div>
+      <div class="word">
+       <span>常居:<a href="">湖南长沙</a></span><br>
+       <span>152084746<br>2016-10-05加入</span>
+      </div>
+      <div class="introduce">
+       <span>(<a href="">添加自我介绍</a>)</span>
+      </div>
+     </div>
+     <div class="broad">
+      <h4>我的广播……</h4><span>(<a href="">全部</a>)</span>
+      <ul>
+       <li>
+        <span>喜欢四月的相册&nbsp;<a href="">蓝色的台湾</a></span><br>
+        <a id="spec" href="">2月9日</a><a href="">回应</a><a href="">删除</a>
+       </li>
+       <li>
+        <span>喜欢cp的相册&nbsp;<a href="">东瀛国</a></span><br>
+        <a id="spec" href="">2月9日</a><a href="">回应</a><a href="">删除</a>
+       </li>
+       <li>
+        <span>喜欢四月的相册&nbsp;<a href="">蓝色的台湾</a></span><br>
+        <a id="spec" href="">2月9日</a><a href="">回应</a><a href="">删除</a>
+       </li>
+      </ul>
+      <a href="" id="more">>更多线上活动</a>
+     </div>
+    </div>
+   </div>
+   <div class="footer">
+    <hr>
+    <div class="footer-left">
+     <p>© 2005－2016 douban.com, all rights reserved北京豆网科技有限公司</p>
+    </div>
+    <div class="footer-right">
+     <p>
+      <a href="">关于豆瓣</a>·
+      <a href="">在豆瓣工作</a>·
+      <a href="">联系我们</a>·
+      <a href="">免责声明</a>·
+      <a href="">帮助中心</a>·
+      <a href="">开发者</a>·
+      <a href="">移动应用</a>·
+      <a href="">豆瓣广告</a>
+     </p>
+    </div>
+   </div>
+   <div class="upload">
+   <div class="upload-center">
+    <div class="upload-title">
+     <span>上传头像</span>
+     <img id="cha" src="/images/wimage/20170310175400.jpg">
+    </div>
+    <div class="carry">
+     <span>将图片拖到这里<br>或</span><br>
+     <a href="">图片上传</a>
+    </div>
+    <div class="attention">
+     <span>照片尺寸需要大于300x300像素<br>建议上传近距离的照片（比如大头照、特写）<br>保存成功后如果图标不更新，你可以用浏览器多刷新几次。</span>
+    </div>
+    <div class="keep">
+     <span>保存</span>
+     <span id="cancelup">取消</span>
+    </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>欢迎加入豆瓣</title>
+  <link rel="Shortcut Icon" href="/images/loginimages/doubanlogo.jpg" />
+  <link rel="stylesheet" type="text/css" href="/css/register.css">
+  <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
+  <script type="text/javascript" rel="stylesheet" src="/js/register.js"></script>
+ </head>
+ <body>
+  <div class="all">
+   <div class="header">
+    <a href=""><img src="/images/loginimages/title.png" /></a>
+   </div>
+   <div class="center">
+    <div class="title">
+     <h2>欢迎加入豆瓣</h2>
+    </div>
+    <div class="content">
+     <div class="content-left">
+      <form class="registerForm" method="post" action="/login">
+       <div class="info">
+        <label>&nbsp;邮箱</label>
+        <input type="text" name="email">
+        <img class="emailtipic" src="">
+        <span class="emailtip"></span>
+       </div>
+       <div class="info">
+        <label>&nbsp;密码</label>
+        <input type="password" name="password"><span class="askpwd"></span>
+       </div>
+       <div class="info">
+        <label>&nbsp;名号</label>
+        <input type="text" name="username"><span class="askuser"></span>
+        <img class="usertipic" src="">
+        <span class="usertip"></span>
+       </div>
+       <div class="suggestion">
+        <span>第一印象很重要，起个响亮的名号吧</span>
+       </div>
+       <div class="info">
+        <label>常居地</label>
+        <span class="adress">豆瓣猜你在长沙，没猜对？</span>
+        <a href="">手动选择</a>
+       </div>
+       <div class="info">
+        <label>手机号</label>
+        <div class="phonebefore">
+         <span>+86</span>
+         <input type="text" name="phone">
+        </div>
+       </div>
+       <div class="suggestion">
+        <span>用手机接收注册验证码 </span><br>
+        <span>验证的手机号如果没有绑定过帐号，会自动绑定当前帐号</span>
+       </div>
+       <div class="info" id="code">
+        <label>验证码</label>
+        <input class="infocode" type="text" name="code">
+        <span class="infosub">获取验证码</span>
+       </div>
+       <div class="agreement">
+        <input id="check" type="checkbox" name="check"><label for="check"><span>我已经认真阅读并同意豆瓣的《<a href="">使用协议</a>》。</span></label>
+       </div>
+      </form>
+       <div class="submit">
+        <a id="submi" href="/getregister">注册</a>
+        <!-- <input type="submit" name="submit" value="注册"> -->
+       </div>
+      
+     </div>
+     <div class="content-right">
+      <p>>已经拥有豆瓣帐号?<a href="/loginPage">直接登录</a></p>
+      ><a href="">点击下载豆瓣移动应用</a>
+     </div>
+    </div>
+   </div>
+   <div class="footer">
+    <hr>
+    <div class="footer-left">
+     <p>© 2005－2016 douban.com, all rights reserved</p>
+    </div>
+    <div class="footer-right">
+     <p>
+      <a href="">关于豆瓣</a>·
+      <a href="">在豆瓣工作</a>·
+      <a href="">联系我们</a>·
+      <a href="">免责声明</a>·
+      <a href="">帮助中心</a>·
+      <a href="">开发者</a>·
+      <a href="">移动应用</a>·
+      <a href="">豆瓣广告</a>
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

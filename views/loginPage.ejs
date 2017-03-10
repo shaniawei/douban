@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="Shortcut Icon" href="/images/signupimages/doubanlogo.jpg" />
+  <link rel="stylesheet" type="text/css" href="/css/loginPage.css">
+  <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
+  <script type="text/javascript" rel="stylesheet" src="/js/loginpage.js"></script>
+  <title>登陆豆瓣</title>
+ </head>
+ <body>
+  <div class="all">
+    <div class="header">
+     <a href=""><img src="/images/signupimages/title.png" /></a>
+    </div>
+    <div class="center">
+     <div class="title">
+      <h2>登陆帐号</h2>
+     </div>
+     <div class="content">
+      <div class="content-left">
+       <a id="phonecode" href="/phonelogin">手机验证码登录</a>
+       <form class="loginForm" method="post" action="/judgeLogin">
+        <div class="info">
+         <label>帐号</label>
+         <input type="text" name="username" placeholder="邮箱/手机号/名号">
+         <img class="usernameTip" src="">
+        </div>
+        <div class="info">
+         <label>密码</label>
+         <input type="password" name="password">
+         <span class="pwdTip"></span>
+        </div>
+       </form>
+        <div class="auto">
+         <input type="checkbox" name="checkbox"><span>下次自动登录|<a href="">忘记密码了</a></span>
+        </div>
+        <div class="sub">
+         <a id="subm" href="/loginPage">登录</a>
+         <!-- <input type="submit" name="submit" value="登录"> -->
+        </div>
+        <div class="other">
+         <span>第三方登录：</span><a href="" title="微信登陆"><img src="/images/signupimages/bhtn.png"></a><a href="" title="微博登陆"><img src="/images/signupimages/grseb.png"></a>
+        </div>
+       
+      </div>
+      <div class="content-right">
+       <p>>已经拥有豆瓣帐号?<a href="/getregister">立即注册</a></p>
+       ><a href="">点击下载豆瓣移动应用</a>
+      </div>
+     </div>
+    </div>
+    <div class="footer">
+     <hr>
+     <div class="footer-left">
+      <p>© 2005－2016 douban.com, all rights reserved</p>
+     </div>
+     <div class="footer-right">
+      <p>
+       <a href="">关于豆瓣</a>·
+       <a href="">在豆瓣工作</a>·
+       <a href="">联系我们</a>·
+       <a href="">免责声明</a>·
+       <a href="">帮助中心</a>·
+       <a href="">开发者</a>·
+       <a href="">移动应用</a>·
+       <a href="">豆瓣广告</a>
+      </p>
+     </div>
+    </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,154 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+.all{
+	margin:30px 200px;
+}
+a{
+	text-decoration: none;
+	color: #336699;
+	font-size: 13px;
+	display: inline-block;
+}
+.header{
+	margin-bottom: 30px;
+}
+.header a img{
+	width: 150px;
+    height: 40px; 
+}
+.title h2{
+	color: #494949;
+	margin-bottom: 30px;
+}
+.content-left,.content-right{
+	display: inline-block;
+	vertical-align: top;
+}
+.content-left{
+	margin:0px 0px 50px 0px;
+	width: 700px;
+}
+.info{
+	margin: 0px 0px 17px 30px;
+}
+.info label{
+	font-size: 14px;
+	margin-right: 10px;
+}
+.info input{
+	width: 200px;
+	border:1px solid #C9C9C9;
+	border-radius: 3px;
+	padding:5px;
+	outline-color: #C9C9C9;
+	font-size: 14px;
+}
+.info a:hover{
+	color: #FFF;
+	background-color: #003399;
+}
+.askpwd,.askuser{
+	font-size: 12px;
+	color: #808080;
+}
+.phonebefore{
+	border:1px solid #CCC;
+	height: 30px;
+	width: 210px;
+	display: inline-block;
+	border-radius: 3px;
+}
+.phonebefore span{
+	color:#4E4949;
+	font-size: 15px;
+	font-weight: bold; 
+	border-right: 1px solid #CCC;
+	padding-right: 10px;
+	margin-left: 5px;
+}
+.phonebefore input{
+	border:0px;
+	width: 149px;
+	height: 20px;
+	padding:5px;
+	outline:0px;
+}
+.suggestion{
+	margin:0px 0px 20px 90px;
+}
+.suggestion span,.adress{
+	color: #808080;
+	font-size: 12px;
+}
+#code{
+	margin-bottom: 60px;
+}
+#code .infocode{
+	width: 90px;
+}
+#code .infosub{
+	width: 90px;
+	font-size: 13px;
+	color: #000;
+	background-color: #FFF;
+	padding:5px 20px;
+	border:1px solid #C9C9C9;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.agreement{
+	margin:0px 0px 25px 90px;
+	font-size: 13px;
+}
+#check,label{
+	cursor:pointer;
+}
+.agreement span a:hover{
+	color: #FFF;
+	background-color:#003399; 
+}
+.submit{
+	margin:0px 0px 30px 90px;
+}
+.submit a{
+	padding:5px 25px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #999;
+	border:1px solid #B9B9B9;
+	border-radius: 3px;
+	outline: 0px;
+	cursor: pointer;
+	background-color: #F0F0F0;
+}
+.content-right{
+	font-size: 13px;
+	color: #666;
+}
+.content-right a:hover{
+	color: #FFF;
+	background-color: #003399;
+}
+.content-right p{
+	margin-bottom: 20px;
+}
+.content-right p a{
+	color: #666699;
+}
+.footer hr{
+	border:1px dashed #DDD;
+}
+.footer-left p{
+	font-size: 13px;
+	color: #9C9999;
+	margin-right: 170px;
+}
+.footer-right p a:hover{
+	color: #FFF;
+	background-color: #003399;
+}
+.footer-left,.footer-right{
+	display: inline-block;
+}
