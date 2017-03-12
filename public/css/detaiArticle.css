@@ -12,6 +12,13 @@
 	font-size: 13px;
 	cursor: pointer;
 }
+#boxclick{
+	display: inline-block;
+	width: 50px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
 .header-top a:hover{
 	color: #FFF;
 }

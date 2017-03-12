@@ -10,6 +10,8 @@ var index=require("./routers/index");
 var ajax=require("./routers/ajax");
 var upload=require("./routers/upload");
 var article=require("./routers/article");
+var detail=require("./routers/detail");
+
 
 var mongodb=require("./mongoose");
 
@@ -47,4 +49,5 @@ app.use("/",login);
 app.use("/",index);
 app.use("/",ajax);  
 app.use("/",upload);
-app.use("/",article) 
+app.use("/",article);
+app.use("/",detail);

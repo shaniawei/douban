@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/css/detaiArticle.css">
   <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
   <script type="text/javascript" rel="stylesheet" src="/js/detaiArticle.js"></script>
-  <title>为什么北京小吃这么难吃？</title>
+  <title><%= doc.title %></title>
  </head>
  <body>
   <div class="all">
@@ -39,14 +39,14 @@
        <li><a href="">提醒</a></li>
        <li><a href="">豆邮</a></li>
        <li class="boxla02">
-        <span id="boxclick">ali的帐号</span>
+        <span id="boxclick"><%= asd.username %>的帐号</span>
         <div class="box2">
          <ul>
-          <li><a href="">个人主页</a></li>
+          <li><a href="/personal">个人主页</a></li>
           <li><a href="">我的订单</a></li>
           <li><a href="">我的钱包</a></li>
           <li><a href="">帐号管理</a></li>
-          <li><a href="">退出</a></li>
+          <li><a href="/logout">退出</a></li>
          </ul>
         </div>
        </li>
@@ -57,7 +57,7 @@
      <div class="main">
       <div class="main-body">
        <ul>
-        <li><a href="">首页</a></li>
+        <li><a href="/success">首页</a></li>
         <li><a href="">我的豆瓣</a></li>
         <li><a href="">浏览发现</a></li>
         <li><a href="">移动应用</a></li>
@@ -67,7 +67,7 @@
       </div>
      </div>
      <div class="left">
-      <a href=""><img src="/images/displayimage/title.png" /></a>
+      <a href="/success"><img src="/images/displayimage/title.png" /></a>
      </div>
      <div class="right">
       <form method="" action="">
@@ -78,15 +78,14 @@
    </div>
    <div class="center">
     <div class="center-left">
-     <h2>为什么北京小吃这么难吃？</h2>
+     <h2><%= doc.title %></h2>
      <div class="author">
-      <a id="headpic" href=""><img src="/images/displayimage/20170213194154.png"></a>
-      <a href="">Tiberium</a>
-      <span>2017-02-08 00:18:42</span>
+      <a id="headpic" href=""><img src=<%= asd.img %> /></a>
+      <a href=""><%= asd.username %></a>
+      <span><%= doc.createDateFormated %></span>
      </div>
      <div class="content">
-      <p>在这里我引入一个基本的假设：贫民食物的发明永远都是某种权宜性质的替代食品。卤煮是吃不起肉于是用下水来代替而发明的，实际上重庆火锅的逻辑是相同的；臭豆腐和某些地方爱吃的毛豆腐都应该是放坏的豆腐废物利用的结果，豆汁也是一样。各地的小吃大多数（如果不是全部的话）应该都是根据这个逻辑所产生的，在它们诞生的早期，我相信味道永远都不是其第一位要考虑的目标。然而，在这个接近于完全竞争的市场上，我同样相信，供应方的商品的质量会很快的演进下去，翻译一下，就是说大家自然要追求食物在基本的成本和物料限制下更加好吃，更加适口。而生产力的发展也同样会改善这个成本和物料的限制，让大家有钱消费使用了更好的原材料，增加了更复杂烹饪方法的食品。所以，这里的自然逻辑就是各地所产生的贫民食品水平都会变得更高，更好吃，更复杂。各个地方的小吃水平应该来说，是符合这条演进曲线的。</p>
-      <p>在这里我引入一个基本的假设：贫民食物的发明永远都是某种权宜性质的替代食品。卤煮是吃不起肉于是用下水来代替而发明的，实际上重庆火锅的逻辑是相同的；臭豆腐和某些地方爱吃的毛豆腐都应该是放坏的豆腐废物利用的结果，豆汁也是一样。各地的小吃大多数（如果不是全部的话）应该都是根据这个逻辑所产生的，在它们诞生的早期，我相信味道永远都不是其第一位要考虑的目标。然而，在这个接近于完全竞争的市场上，我同样相信，供应方的商品的质量会很快的演进下去，翻译一下，就是说大家自然要追求食物在基本的成本和物料限制下更加好吃，更加适口。而生产力的发展也同样会改善这个成本和物料的限制，让大家有钱消费使用了更好的原材料，增加了更复杂烹饪方法的食品。所以，这里的自然逻辑就是各地所产生的贫民食品水平都会变得更高，更好吃，更复杂。各个地方的小吃水平应该来说，是符合这条演进曲线的。</p>
+      <p><%= doc.content %></p>
      </div>
      <div class="content-footer">
       <div class="report">
@@ -180,11 +179,11 @@
     <div class="center-right">
      <div class="one">
       <div class="word">
-       <span><a href="">Tiberium</a>(北京)</span>
-       <p>Tiberium | UnRead 「Tiberium」是一个文艺却不高冷、精致而不空洞...</p>
+       <span><a href=""><%= asd.username %></a>(北京)</span>
+       <p><%= asd.reserve %></p>
       </div>
       <div class="pichead">
-       <a href=""><img src="/images/displayimage/20170213194154.png"></a>
+       <a href=""><img src=<%= asd.img %> /></a>
       </div>
       <div class="follow">
        <span>关注此人 <img src="/images/displayimage/add.jpg"></span>
@@ -194,8 +193,8 @@
       </div>
      </div>
      <div class="two1">
-      <span class="stitle">Tiberium的最新日记……</span><span>(<a href="">全部</a>)</span><br>
-      <a href="">我希望男朋友穿得像条狗 </a>
+      <span class="stitle"><%= asd.username %>的最新日记……</span><span>(<a href="">全部</a>)</span><br>
+      <a href=""><%= doc.title %> </a>
       <span class="diary">(7人喜欢)</span>
      </div>
      <div class="two">

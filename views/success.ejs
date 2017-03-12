@@ -102,15 +102,15 @@
         <% docs.forEach(function(doc){ %>
         <div class="personal">
        <div class="personal-left">
-        <a href="" title="<%= doc.title %>"><img src="<%= doc.author.img %>" /></a>
+        <a href="/personal" title="<%= doc.title %>"><img src="<%= doc.author.img %>" /></a>
        </div>
        <div class="personal-right">
         <div class="personal-right-top">
-         <a href=""><%= doc.author.username %> </a><span>的日记:</span>
+         <a href="/personal"><%= doc.author.username %> </a><span>的日记:</span>
         </div>
         <div class="personal-right-con">
          <div class="personal-right-content">
-          <h5><a href=""><%= doc.title %></a></h5>
+          <h5><a href='<%= "/detailArticle/"+doc._id %>' ><%= doc.title %></a></h5>
           <p><%= doc.content %></p>
         </div>
         </div>

@@ -18,12 +18,10 @@ router.get("/phonelogin",function(req,res){   //手机登陆页面
 });
 
 router.get("/success",function(req,res){   //
-  console.log(1221221);
    ArticleModel.find({}).limit(10).sort("-createDate").populate(["author"]).exec(function(err,docs){
        if(err){
           docs=""
        }
-       console.log(23);
        res.render("success",{asd:req.session.user,docs:docs});
    })
 });
@@ -54,7 +52,7 @@ router.post("/login",function(req,res){    //注册逻辑,接受来自注册页�
 
 router.get("/logout",function(req,res){
   req.session.user=null;
-  res.redirect("/")
+  res.redirect("/");
 })
 
 router.post("/judgeLogin",function(req,res){  //登陆判断,判断用户能不能登陆成功

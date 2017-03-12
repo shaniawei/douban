@@ -68,7 +68,6 @@ $(document).ready(function(){
 	});
 	$("#alter").on("click",function(){
 		var signtext=$("input[name='signtext']").val();
-		if (signtext.length>0) {
 			$.ajax({
 				method:"POST",
 				url:"/signtext",
@@ -76,17 +75,17 @@ $(document).ready(function(){
 				success:function(data){
 					if (data.flag=="true") {
 						$(".box3").css("display","none");
-						$(".sign").css("display","block").text(signtext);
+						$(".sign").css("display","block").text(signtext||"(添加签名档)");
 					}
 				}
 			});
-		}
+
 	});
 
 
   $(".headPicUpload").on('click',function(e){
-  	  $("input[name='headPic']").trigger('click')
-  	  e.preventDefault()
+  	  $("input[name='headPic']").trigger('click');
+  	  e.preventDefault();
   })
 
   $("input[name='headPic']").on('change',function(){
@@ -98,7 +97,7 @@ $(document).ready(function(){
           		$(".upload").css("display",'none')
           		$(".authorImg").attr("src",data.headPic)
           	}else{
-          		alter(data.flag)
+          		alert(data.flag);
           	}
           }
   	  })

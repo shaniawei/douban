@@ -294,6 +294,10 @@ textarea{
 	display: inline-block;
 	vertical-align: top;
 }
+.pichead img{
+	width: 49px;
+	height: 47px;
+}
 .introduce{
 	border-top: 1px solid #F5E9DB;
 	margin-top: 10px;

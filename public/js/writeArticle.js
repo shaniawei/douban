@@ -44,4 +44,8 @@ $(document).ready(function(){
 	$("#report").on("click",function(){
 		$(".articleForm").trigger("submit")
 	})
+	$("#cancel").on("click",function(){
+		window.location="./success";
+		return false;
+	});
 });

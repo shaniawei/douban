@@ -17,7 +17,7 @@ router.post("/sendArticle",function(req,res){
          })
          article.save(function(err){
               console.log("save success");
-              res.redirect("/success")
+              res.redirect("/success");
          })
      
     

@@ -40,6 +40,7 @@ router.post("/signtext",function(req,res){
             if(err){
                 res.json({flag:"false"});
             }else{
+                req.session.user.reserve=signtext;
                 res.json({flag:"true"});
             }
         });

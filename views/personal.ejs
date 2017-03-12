@@ -7,7 +7,7 @@
   <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
   <script type="text/javascript" rel="stylesheet" src="/js/jquery-form.js"></script>
   <script type="text/javascript" rel="stylesheet" src="/js/personal.js"></script>
-  <title>alair</title>
+  <title><%= asd.username %></title>
  </head>
  <body>
   <div class="all">
@@ -44,7 +44,7 @@
         <span id="boxclick"><%= asd.username %></span>
         <div class="box2">
          <ul>
-          <li><a href="">个人主页</a></li>
+          <li><a href="/personal">个人主页</a></li>
           <li><a href="">我的订单</a></li>
           <li><a href="">我的钱包</a></li>
           <li><a href="">帐号管理</a></li>
@@ -83,7 +83,7 @@
     <div class="center-left">
      <div class="center-left-top">
       <div class="center-left-top-left">
-       <a href="" id="headpic">
+       <a href="/personal" id="headpic">
          <img class="authorImg" src="<%= asd.img %>" >
        </a>
       </div>
@@ -115,10 +115,10 @@
       </ul>
      </div>
      <div class="set">
-      <p>alair，这里是你的主页，用来展示你的生活和发现，也是别人认识你的地方。<br>
+      <p><%= asd.username %>，这里是你的主页，用来展示你的生活和发现，也是别人认识你的地方。<br>
 完善你的个人资料，开始全新的豆瓣之旅吧。</p>
       <ol>
-       <li><a id="uploadpic" href="">上传头像</a></li>
+       <li><a id="uploadpic" href="">上传/修改头像</a></li>
        <li><a href="">写一段自我介绍</a></li>
       </ol>
       <p>以上选项也可以在页面右上角你的帐号中找到。</p>
@@ -208,7 +208,7 @@
    <div class="upload">
    <div class="upload-center">
     <div class="upload-title">
-     <span>上传头像</span>
+     <span>上传/修改头像</span>
      <img id="cha" src="/images/wimage/20170310175400.jpg">
     </div>
     <div class="carry">

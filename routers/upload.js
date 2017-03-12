@@ -26,8 +26,10 @@ router.post("/headPic",function(req,res){
                          if(err){
                          	res.json({flag:"保存失败"})
                          }else{
+                            req.session.user.img=img
                             res.json({headPic:img})   //图片在服务器的存放路径
                          }
+
                  })
             });
             
