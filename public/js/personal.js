@@ -82,4 +82,26 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+
+  $(".headPicUpload").on('click',function(e){
+  	  $("input[name='headPic']").trigger('click')
+  	  e.preventDefault()
+  })
+
+  $("input[name='headPic']").on('change',function(){
+  	  $(".headPicForm").ajaxSubmit({    //jQuery插件的ajaxSubmit函数，可以帮助我们以ajax的形式发送文件数据
+          method:"POST",
+          url:"/headPic",
+          success:function(data){
+          	if(data.headPic){
+          		$(".upload").css("display",'none')
+          		$(".authorImg").attr("src",data.headPic)
+          	}else{
+          		alter(data.flag)
+          	}
+          }
+  	  })
+  })
+
 });

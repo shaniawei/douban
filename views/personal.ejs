@@ -5,6 +5,7 @@
   <link rel="Shortcut Icon" href="/images/perimage/doubanlogo.jpg" />
   <link rel="stylesheet" type="text/css" href="/css/personal.css">
   <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
+  <script type="text/javascript" rel="stylesheet" src="/js/jquery-form.js"></script>
   <script type="text/javascript" rel="stylesheet" src="/js/personal.js"></script>
   <title>alair</title>
  </head>
@@ -82,7 +83,9 @@
     <div class="center-left">
      <div class="center-left-top">
       <div class="center-left-top-left">
-       <a href="" id="headpic"><img src="/images/perimage/20170213154639.png"></a>
+       <a href="" id="headpic">
+         <img class="authorImg" src="<%= asd.img %>" >
+       </a>
       </div>
       <div class="center-left-top-right">
        <span class="headname"><%= asd.username %></span><br>
@@ -154,7 +157,7 @@
     <div class="center-right">
      <div class="one">
       <div class="pichead">
-       <img src="/images/perimage/20170213154639.png">
+         <img class="authorImg" src="<%= asd.img %>" >
       </div>
       <div class="word">
        <span>常居:<a href="">湖南长沙</a></span><br>
@@ -210,7 +213,10 @@
     </div>
     <div class="carry">
      <span>将图片拖到这里<br>或</span><br>
-     <a href="">图片上传</a>
+     <a href="" class="headPicUpload">图片上传</a>
+     <form method="POST" class="headPicForm" enctype="multipart/form-data" style="display: none;">
+      <input type="file" name="headPic">
+     </form>
     </div>
     <div class="attention">
      <span>照片尺寸需要大于300x300像素<br>建议上传近距离的照片（比如大头照、特写）<br>保存成功后如果图标不更新，你可以用浏览器多刷新几次。</span>

@@ -41,4 +41,7 @@ $(document).ready(function(){
 	$("#cha").on("mouseout",function(){
 		$("#cha").attr("src","/images/wimage/20170310175400.jpg");
 	});
+	$("#report").on("click",function(){
+		$(".articleForm").trigger("submit")
+	})
 });

@@ -79,7 +79,8 @@
    <div class="center">
     <h2>新加日记</h2>
     <div class="center-left">
-     <form method="" action="">
+
+     <form class="articleForm" method="POST" action="/sendArticle">
       <div class="title">
        <span>题目：</span><br>
        <input type="text" name="titlecontent">
@@ -93,11 +94,11 @@
        </div>
       </div>
       <div class="content">
-       <textarea></textarea>
+       <textarea name="content"></textarea>
       </div>
       <div class="articletag">
        <span>标签：</span><br>
-       <input type="text" name="" placeholder="添加标签，多个标签用空格分隔，帮助你更好的整理内容">
+       <input type="text" name="tags" placeholder="添加标签，多个标签用空格分隔，帮助你更好的整理内容">
       </div>
       <div class="oftentag">
        <div class="oftentag-left">

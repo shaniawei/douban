@@ -4,10 +4,13 @@
       padding:0px;
    }
    .all-header-top{
-      padding:20px 200px;
+      padding:20px 15%;
+      overflow: hidden;
    }
    .all-header-top-right{
       display: inline-block;
+      width: 50%;
+      overflow: hidden;
    }
    .all-header-top-right a{
       display: inline-block;
@@ -19,7 +22,10 @@
       margin-right: 15px;
    }
    .search{
-      display: inline-block;
+      /*display: inline-block;
+      vertical-align: middle;*/
+      float: right;
+      padding-top: 7px;
    }
    .search form{
       display: inline-block;
@@ -44,8 +50,12 @@
     background-repeat: no-repeat;
    }
    .all-header-top-left{
-      display: inline-block;
-      vertical-align: middle;
+      /*display: inline-block;
+      vertical-align: middle;*/
+      float: right;
+   }
+   .all-header-top-left ul{
+      padding-top: 5px;
    }
    .all-header-top-left ul li{
       list-style-type: none;

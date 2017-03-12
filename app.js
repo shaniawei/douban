@@ -8,6 +8,8 @@ var http=require("http");
 var login=require("./routers/login");
 var index=require("./routers/index");
 var ajax=require("./routers/ajax");
+var upload=require("./routers/upload");
+var article=require("./routers/article");
 
 var mongodb=require("./mongoose");
 
@@ -44,3 +46,5 @@ app.use(express.static(path.join(__dirname,"public")));
 app.use("/",login);
 app.use("/",index);
 app.use("/",ajax);  
+app.use("/",upload);
+app.use("/",article) 

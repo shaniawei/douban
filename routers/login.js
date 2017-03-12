@@ -1,6 +1,7 @@
 
 var express=require("express");
 var UserModel=require("../models/user");
+var ArticleModel=require("../models/article");
 
 var router=express.Router();
 
@@ -17,8 +18,14 @@ router.get("/phonelogin",function(req,res){   //手机登陆页面
 });
 
 router.get("/success",function(req,res){   //
-   // var user=req.session.user;
-   res.render("success",{asd:req.session.user});
+  console.log(1221221);
+   ArticleModel.find({}).limit(10).sort("-createDate").populate(["author"]).exec(function(err,docs){
+       if(err){
+          docs=""
+       }
+       console.log(23);
+       res.render("success",{asd:req.session.user,docs:docs});
+   })
 });
 
 router.get("/personal",function(req,res){   //个人主页
@@ -52,7 +59,7 @@ router.get("/logout",function(req,res){
 
 router.post("/judgeLogin",function(req,res){  //登陆判断,判断用户能不能登陆成功
      if(req.session.user){
-       res.render("success",{asd:req.session.user});
+       res.redirect("/success")
        return ;
      }
      var a=req.body.username;    //mbj,347475@
@@ -77,7 +84,7 @@ function login(err,doc,req,res){
       }else{
         if (doc) {
           req.session.user=doc;
-          res.render("success",{asd:doc});
+          res.redirect("/success")
         }else{
           res.render("loginPage",{});
         }

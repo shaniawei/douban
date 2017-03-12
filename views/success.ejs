@@ -96,8 +96,34 @@
       </div>
      </div>
      <div class="addtopic"></div>
+
      <div class="content">
-      <div class="personal">
+     <% if(docs[0]){  %>
+        <% docs.forEach(function(doc){ %>
+        <div class="personal">
+       <div class="personal-left">
+        <a href="" title="<%= doc.title %>"><img src="<%= doc.author.img %>" /></a>
+       </div>
+       <div class="personal-right">
+        <div class="personal-right-top">
+         <a href=""><%= doc.author.username %> </a><span>的日记:</span>
+        </div>
+        <div class="personal-right-con">
+         <div class="personal-right-content">
+          <h5><a href=""><%= doc.title %></a></h5>
+          <p><%= doc.content %></p>
+        </div>
+        </div>
+        <div class="personal-right-footer">
+         <span>今天下午，来自 <a href=""><%= doc.tags %></a></span>
+        </div>
+       </div>
+      </div>
+     <% })}else{ %>
+      <div>暂时没有文章</div>
+     <% } %>
+
+      <!-- <div class="personal">
        <div class="personal-left">
         <a href="" title="张秋寒"><img src="/images/image/20170209194426.png" /></a>
        </div>
@@ -116,6 +142,7 @@
         </div>
        </div>
       </div>
+
       <div class="personal">
        <div class="personal-left">
         <a href="" title="Eve"><img src="/images/image/20170209225109.png" /></a>
@@ -138,6 +165,7 @@
         </div>
        </div>
       </div>
+
       <div class="personal">
        <div class="personal-left">
         <a href="" title="四月"><img src="/images/image/20170209231502.png" /></a>
@@ -172,8 +200,10 @@
          <span>今天下午，来自 <a href="">热门精选</a></span>
         </div>
        </div>
-      </div>
+      </div> -->
+
      </div>
+
      <div class="page">
       <ul>
        <li><a href=""><前页</a></li>
