@@ -47,4 +47,19 @@ router.post("/signtext",function(req,res){
     }
 });
 
+router.post("/sendintrodus",function(req,res){
+    var val=req.body.val;
+    if (req.session.user) {
+        UserModel.update({_id:req.session.user._id},{$set:{summary:val}},function(err){
+            if(err){
+                res.json({flag:"false"});
+            }else{
+                req.session.user.summary=val;
+                res.json({flag:"true"});
+            }
+        });
+    }
+    
+});
+
 module.exports=router;

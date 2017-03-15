@@ -41,7 +41,7 @@
        <li><a href="">提醒</a></li>
        <li><a href="">豆邮</a></li>
        <li class="boxla02">
-        <span id="boxclick"><%= asd.username %></span>
+        <a id="boxclick"><%= asd.username %>的账号</a>
         <div class="box2">
          <ul>
           <li><a href="/personal">个人主页</a></li>
@@ -119,7 +119,13 @@
 完善你的个人资料，开始全新的豆瓣之旅吧。</p>
       <ol>
        <li><a id="uploadpic" href="">上传/修改头像</a></li>
-       <li><a href="">写一段自我介绍</a></li>
+       <li><a id="introduce" href="">
+       <% if(asd.summary){ %>
+       更新自我介绍
+       <% }else{ %>
+       写一段自我介绍
+       <% } %>
+       </a></li>
       </ol>
       <p>以上选项也可以在页面右上角你的帐号中找到。</p>
      </div>
@@ -130,7 +136,15 @@
         <a href="/writeArticle"><img src="/images/perimage/add.jpg"><span>写日记</span></a>
        </div>
       </div>
-      <p>在豆瓣上写日记，记录自己的生活、想法。</p>
+      <div class="detaildiary">
+      <% if(docs[0]){ %>
+      <% docs.forEach(function(doc){ %>
+      <a href='<%= "/detailArticle/"+doc._id %>'><%= doc.title %></a>
+      <span><%= doc.createDateFormated %></span><hr><br>
+      <% })}else{ %>
+      <p class="explain">在豆瓣上写日记，记录自己的生活、想法。</p>
+      <% } %>
+      </div>
      </div>
      <div class="mine">
       <div class="diary">
@@ -142,7 +156,9 @@
         <a href=""><img src="/images/perimage/add.jpg"><span>发照片</span></a>
        </div>
       </div>
+      <div class="detaildiary">
       <p>可以有自己的相册来存放照片了。</p>
+      </div>
      </div>
      <div class="mine">
       <div class="diary">
@@ -164,9 +180,27 @@
        <span>152084746<br>2016-10-05加入</span>
       </div>
       <div class="introduce">
-       <span>(<a href="">添加自我介绍</a>)</span>
+       <span id="addcontent">
+       <% if(asd.summary){ %>
+       <%= asd.summary %>
+       <% } %>
+       </span>
+       <span class="add">(<a id="add" href="">
+       <% if(asd.summary){ %>
+       编辑
+       <% }else{ %>
+       添加自我介绍
+       <% } %>
+       </a>)</span>
+      </div>
+      <div class="inputbox">
+        <textarea name="smallinput" id="smallinput"></textarea><br>
+        <span id="save">保存</span>
+        <span id="anothercancel">取消</span>
       </div>
      </div>
+     
+
      <div class="broad">
       <h4>我的广播……</h4><span>(<a href="">全部</a>)</span>
       <ul>
@@ -226,6 +260,19 @@
      <span id="cancelup">取消</span>
     </div>
     </div>
+   </div>
+
+   <div class="introducebox">
+   <div class="introduceboxcontent">
+    <div class="boxtitle">
+     <span>更新自我介绍</span>
+     <img id="close" src="/images/wimage/20170310175400.jpg">
+    </div>
+     <form method="POST" action="/introduce">
+       <textarea id="inputbox" name="introduce"></textarea><br>
+       <input id="submitbox" type="submit" name="submit" value="更新自我介绍">
+     </form>
+     </div>
    </div>
   </div>
  </body>

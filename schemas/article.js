@@ -1,4 +1,5 @@
 var mongoose=require("mongoose");
+var utils=require('../methods/utils');
 var Schema=mongoose.Schema;
 
 var ArticleSchema=new Schema({
@@ -17,7 +18,7 @@ var ArticleSchema=new Schema({
 
 
 ArticleSchema.pre("save",function(next){
-	this.createDate=Date.now
+	this.createDate=Date.now;
 	next()
 })
 

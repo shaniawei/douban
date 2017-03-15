@@ -39,7 +39,7 @@
        <li><a href="">提醒</a></li>
        <li><a href="">豆邮</a></li>
        <li class="boxla02">
-        <span id="boxclick"><%= asd.username %>的账号</span>
+        <a id="boxclick"><%= asd.username %>的账号</a>
         <div class="box2">
          <ul>
           <li><a href="/personal">个人主页</a></li>
@@ -115,7 +115,7 @@
         </div>
         </div>
         <div class="personal-right-footer">
-         <span>今天下午，来自 <a href=""><%= doc.tags %></a></span>
+         <span><%= doc.createDateFormated %> 标签： <a href=""><%= doc.tags %></a></span>
         </div>
        </div>
       </div>

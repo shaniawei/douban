@@ -48,4 +48,12 @@ $(document).ready(function(){
 		window.location="./success";
 		return false;
 	});
+
+	$("tr").on("click",function(e){   //学会使用事件委托以及真正明白事件的对象
+		var event=e.target,
+		eventval=event.innerHTML,
+		inputval=$("input[name='tags']").val();
+		$("input[name='tags']").val(inputval+eventval+";");
+		e.preventDefault();
+	});
 });

@@ -2,6 +2,7 @@
 var express=require("express");
 var UserModel=require("../models/user");
 var ArticleModel=require("../models/article");
+var utils=require('../methods/utils');
 
 var router=express.Router();
 
@@ -22,14 +23,32 @@ router.get("/success",function(req,res){   //
        if(err){
           docs=""
        }
+       docs.forEach(function(doc){
+        doc.createDateFormated=utils.formateDate(doc.createDate);
+       });
        res.render("success",{asd:req.session.user,docs:docs});
    })
 });
 
 router.get("/personal",function(req,res){   //个人主页
-   // var user=req.session.user;
-   res.render("personal",{asd:req.session.user});
+   // ArticleModel.findOne({_id:req.params.id},function(err,doc){
+   //  doc.createDateFormated=utils.formateDate(doc.createDate)
+   //      res.render("personal",{asd:req.session.user,doc:doc});
+   //   });
+   ArticleModel.find({author:req.session.user._id},function(err,docs){
+       if(err){
+          docs="";
+       }
+       docs.forEach(function(doc){
+        doc.createDateFormated=utils.formateDate(doc.createDate);
+       });
+       
+       res.render("personal",{asd:req.session.user,docs:docs});
+   })
+   
 });
+
+// docs=[{title:"",content:"",tags:""},{},{}]
 
 router.get("/writeArticle",function(req,res){   //文章编辑页面
    // var user=req.session.user;

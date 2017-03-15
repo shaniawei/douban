@@ -6,30 +6,38 @@
 	background-color: #545652;
 	padding:5px;
 }
+.header-top:after{
+	content:".";
+	display: block;
+	clear: both;
+	line-height: 0px;
+	visibility: hidden;
+}
 .header-top a,#boxclick{
 	text-decoration: none;
 	color:#D5D5D5;
 	font-size: 13px;
 	cursor: pointer;
 }
-#boxclick{
+/*#boxclick{
 	display: inline-block;
 	width: 50px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-}
+}*/
 .header-top a:hover{
 	color: #FFF;
 }
 #boxclick:hover{
 	color: #FFF;
 }
-.header-top-left,.header-top-right{
+.header-top-left{
 	display: inline-block;
 }
-.header-top-left{
-	margin:0px 410px 0px 0px;
+.header-top-right{
+	float: right;
+	margin-right: 30px;
 }
 .header-top ul li{
 	list-style-type: none;
@@ -69,7 +77,7 @@
 .box2{
 	position: absolute;
 	top: 26px;
-	left: -25px;
+	left: -10px;
 	width: 80px;
 	height: 150px;
 	padding:8px 0px;

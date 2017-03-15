@@ -1,7 +1,7 @@
 var formidable=require("formidable");
 var express=require("express");
 var UserModel=require("../models/user");
-var fs=require("fs")
+var fs=require("fs");
 
 var router=express.Router()
 
@@ -38,7 +38,23 @@ router.post("/headPic",function(req,res){
          }
      }); 
 
-})
+});
+router.post("/introduce",function(req,res){
+    var summary=req.body.introduce;
+    if (summary.length>0) {
+        UserModel.update({_id:req.session.user._id},{$set:{summary:summary}},function(err){
+                         if(err){
+                            // res.json({flag:"保存失败"})
+
+                         }else{
+                            req.session.user.summary=summary;
+                            res.render("personal",{asd:req.session.user});
+                            // res.json({headPic:img})   //图片在服务器的存放路径
+                         }
+
+                 });
+    }
+});
 
 
 module.exports=router

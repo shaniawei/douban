@@ -100,7 +100,68 @@ $(document).ready(function(){
           		alert(data.flag);
           	}
           }
-  	  })
-  })
+  	  });
+  });
+
+  $("#introduce").on("click",function(e){
+  	var introducebox=$(".introducebox").css("display");
+  	if (introducebox=="none") {
+  		$(".introducebox").css("display","block");
+  		e.preventDefault();
+  	}
+  });
+  $("#close").on("mouseover",function(){
+  	$("#close").attr("src","/images/wimage/20170310175400.png");
+  });
+  $("#close").on("mouseout",function(){
+		$("#close").attr("src","/images/wimage/20170310175400.jpg");
+  });
+  $("#close").on("click",function(){
+		var introducebox=$(".introducebox").css("display");
+  	if (introducebox=="block") {
+  		$(".introducebox").css("display","none");
+  	}
+  });
+
+  $("#add").on("click",function(e){
+  	  var inputbox=$(".inputbox").css("display");
+  	  if (inputbox=="none") {
+  	  	$(".inputbox").css("display","block");
+  	  	$(".add").css("display","none");
+  	  	$("#addcontent").css("display","none");
+  	  	e.preventDefault();
+  	  }
+  });
+  $("#anothercancel").on("click",function(){
+  	    $(".add").css("display","block");
+  	    $(".inputbox").css("display","none");
+  	    $("#addcontent").css("display","block");
+  });
+
+  $("#save").on("click",function(){
+  	   var val=$("#smallinput").val();
+  	   $.ajax({
+  	   	  method:"POST",
+  	   	  url:"/sendintrodus",
+  	   	  data:{val:val},
+  	   	  success:function(data){
+  	   	  	if (data.flag=="true") {
+  	   	  		$(".inputbox").css("display","none");
+  	   	  		if(val==""){
+  	   	  			$(".add").css("display","inline-block");
+                    $("#add").text("添加自我介绍");
+                    $("#addcontent").css("display","inline-block").text(val);
+                    $("#introduce").text("写一段自我介绍");
+                    
+  	   	  		}else{
+  	   	  			$(".add").css("display","inline-block");
+  	   	  			$("#add").text("编辑");
+  	   	  		    $("#addcontent").css("display","inline-block").text(val);
+  	   	  		    $("#introduce").text("更新自我介绍");
+  	   	  		}
+  	   	  	}
+  	   	  }
+  	   });
+  });
 
 });

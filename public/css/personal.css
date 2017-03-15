@@ -6,30 +6,41 @@
 	background-color: #545652;
 	padding:5px;
 }
+.header-top:after{
+	content:".";
+	display: block;
+	clear: both;
+	line-height: 0px;
+	visibility: hidden;
+}
 .header-top a,#boxclick{
 	text-decoration: none;
 	color:#D5D5D5;
 	font-size: 13px;
 	cursor: pointer;
 }
-#boxclick{
+/*#boxclick{
 	display: inline-block;
 	width: 50px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-}
+}*/
+/*.boxla02{
+	float: right;
+}*/
 .header-top a:hover{
 	color: #FFF;
 }
 #boxclick:hover{
 	color: #FFF;
 }
-.header-top-left,.header-top-right{
+.header-top-left{
 	display: inline-block;
 }
-.header-top-left{
-	margin:0px 410px 0px 0px;
+.header-top-right{
+	float: right;
+	margin-right: 30px;
 }
 .header-top ul li{
 	list-style-type: none;
@@ -69,7 +80,7 @@
 .box2{
 	position: absolute;
 	top: 26px;
-	left: -25px;
+	left: -10px;
 	width: 80px;
 	height: 150px;
 	padding:8px 0px;
@@ -245,6 +256,24 @@
 	font-size: 16px;
 	font-weight:normal;
 }
+.detaildiary{
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+.detaildiary a{
+	font-size: 16px;
+	margin-right: 15px;
+}
+.detaildiary span{
+	font-size: 14px;
+	color: #999;
+	float: right;
+}
+.detaildiary hr{
+	color:#ccc;
+	border-style: dashed;
+	margin-top: 5px;
+}
 .write{
 	float: right;
 	background-color: #FCF7F3;
@@ -304,6 +333,9 @@ textarea{
 	padding-top: 10px;
 	padding-bottom: 5px;
 }
+/*#addcontent{
+	display: none;
+}*/
 .broad ul li{
 	list-style-type: none;
 	margin-top: 20px;
@@ -420,7 +452,7 @@ textarea{
 	outline:none;
 	margin-right: 10px;
 }
-.box3 span{
+.box3 span,.inputbox span{
 	box-sizing: border-box;
 	cursor: pointer;
 	border:1px solid #36363F;
@@ -429,6 +461,66 @@ textarea{
 	margin-right: 15px;
 	font-size: 13px;
 }
+.inputbox{
+	display: none;
+}
+.inputbox span{
+	background-color: #E3E3E3;
+	padding:0px 5px;
+	border-color: #ccc;
+	color: #000;
+}
+.inputbox span:hover{
+	border-color: #999;
+}
+.inputbox  textarea{
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	padding:5px;
+	margin:0px;
+}
+.introducebox{
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border:10px solid rgba(183,187,183,0.5);
+	border-radius: 5px;
+	background-color: transparent;
+}
+.introduceboxcontent{
+	background-color: #EDF4ED;
+}
+.boxtitle{
+	padding-left:5px;
+	color: #007722;
+	margin-bottom: 10px;
+}
+.boxtitle img{
+	float: right;
+	margin-right: 15px;
+	margin-top: 6px;
+	cursor: pointer;
+}
+#inputbox{
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	outline: none;
+	margin:0px 10px;
+	border:1px solid #007722;
+	padding:5px;
+}
+#submitbox{
+	display: inline-block;
+	padding:0px 10px;
+	margin:0px 10px 10px 10px;
+	cursor: pointer;
+}
+
+
 .footer{
 	margin:0px 200px 50px 200px;
 }
