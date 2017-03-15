@@ -9,6 +9,13 @@ function formateDate(date){
     return str;
 }
 
+function  tagssplit(str){
+	var newstr=str.split(";");
+	// newstr.splice(newstr.length-1,1);
+	return newstr;
+}
+
 module.exports={
-	formateDate:formateDate
+	formateDate:formateDate,
+	tagssplit:tagssplit
 }

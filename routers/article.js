@@ -16,7 +16,6 @@ router.post("/sendArticle",function(req,res){
             author:req.session.user._id
          })
          article.save(function(err){
-              console.log("save success");
               res.redirect("/success");
          })
      

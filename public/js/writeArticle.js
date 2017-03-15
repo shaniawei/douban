@@ -6,7 +6,7 @@ $(document).ready(function(){
 			e.stopPropagation();
 		}else if (box2=="block") {
 			$(".box2").css("display","none");
-			e.stopPropagation();
+			e.stopPropagation();  //学会了冒泡机制以及如何阻止冒泡
 		}
 	});
 	$(document).on("click",function(){
@@ -42,8 +42,8 @@ $(document).ready(function(){
 		$("#cha").attr("src","/images/wimage/20170310175400.jpg");
 	});
 	$("#report").on("click",function(){
-		$(".articleForm").trigger("submit")
-	})
+		$(".articleForm").trigger("submit");
+	});
 	$("#cancel").on("click",function(){
 		window.location="./success";
 		return false;
@@ -53,7 +53,14 @@ $(document).ready(function(){
 		var event=e.target,
 		eventval=event.innerHTML,
 		inputval=$("input[name='tags']").val();
-		$("input[name='tags']").val(inputval+eventval+";");
-		e.preventDefault();
+		inputvalarr=inputval.split(";");
+		inputvalarr.splice(inputvalarr.length-1,1);
+		if (inputvalarr.length<5) {
+		   $("input[name='tags']").val(inputval+eventval+";");
+		   e.preventDefault();
+		}else{
+			alert("标签不宜过多哦~");
+			e.preventDefault();
+		}
 	});
 });

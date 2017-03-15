@@ -93,9 +93,12 @@
       </div>
       <div class="tag">
        <ul>
-        <li><a href="">人文</a></li>
-        <li><a href="">文学</a></li>
-        <li><a href="">诗</a></li>
+        <% if(doc.tagarr){ %>
+        <% doc.tagarr.forEach(function(tag){ %>
+        <li><a href=""><%= tag %></a></li>
+        <% })} %>
+        <!-- <li><a href="">文学</a></li>
+        <li><a href="">诗</a></li> -->
        </ul>
       </div>
       <div class="copy">

@@ -7,6 +7,7 @@ var router=express.Router();
 router.get("/detailArticle/:id",function(req,res){
 	 ArticleModel.findOne({_id:req.params.id},function(err,doc){
 	 	doc.createDateFormated=utils.formateDate(doc.createDate);
+	 	doc.tagarr=utils.tagssplit(doc.tags);
         res.render("detailArticle",{asd:req.session.user,doc:doc});
      });
    

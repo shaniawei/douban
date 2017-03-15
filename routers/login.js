@@ -21,10 +21,10 @@ router.get("/phonelogin",function(req,res){   //手机登陆页面
 router.get("/success",function(req,res){   //
    ArticleModel.find({}).limit(10).sort("-createDate").populate(["author"]).exec(function(err,docs){
        if(err){
-          docs=""
+          docs="";
        }
        docs.forEach(function(doc){
-        doc.createDateFormated=utils.formateDate(doc.createDate);
+       doc.createDateFormated=utils.formateDate(doc.createDate);
        });
        res.render("success",{asd:req.session.user,docs:docs});
    })
@@ -40,7 +40,7 @@ router.get("/personal",function(req,res){   //个人主页
           docs="";
        }
        docs.forEach(function(doc){
-        doc.createDateFormated=utils.formateDate(doc.createDate);
+       doc.createDateFormated=utils.formateDate(doc.createDate);
        });
        
        res.render("personal",{asd:req.session.user,docs:docs});
@@ -64,7 +64,6 @@ router.post("/login",function(req,res){    //注册逻辑,接受来自注册页�
      // var check=req.body.check;
      var user=new UserModel({username:username,password:password,email:email});  //保存该用户到数据库
      user.save(function(err){
-     	console.log("save "+username+" success");
      	res.render("loginPage",{});  //注册成功，返回注册成功页面loginPage
      });
 });
