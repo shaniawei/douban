@@ -61,5 +61,19 @@ router.post("/sendintrodus",function(req,res){
     }
     
 });
+// router.post("/code",function(req,res){
+//     var code=req.body.code,
+//         number=req.body.number;
+//         if (code==number) {
+//             res.json({flag:"true"});
+//         }else{
+//             res.json({flag:"false"});
+//         }
+// });
+
+router.post("/getCode",function(req,res){
+    var random=parseInt(Math.random()*9000+1000);
+    res.json({num:random});
+});
 
 module.exports=router;

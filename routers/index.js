@@ -3,7 +3,8 @@ var express=require("express");
 var router=express.Router();
 
 router.get("/",function(req,res){
-   res.render("douban",{});
+   var random=parseInt(Math.random()*9000+1000);
+   res.render("douban",{random:random});
 });
 
 router.get("/index",function(req,res){

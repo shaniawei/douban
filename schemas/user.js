@@ -19,7 +19,6 @@ var UserSchema=new Schema({
     profession:String,
     job:String,
     company:String,
-    mbj:String,
     dateReg:{
     	type:Date,
     	default:new Date()

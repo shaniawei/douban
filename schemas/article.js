@@ -18,7 +18,7 @@ var ArticleSchema=new Schema({
 
 
 ArticleSchema.pre("save",function(next){
-	this.createDate=Date.now
+	this.createDate=Date.now()
 	next()
 })
 

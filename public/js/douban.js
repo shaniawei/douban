@@ -39,11 +39,37 @@ $(document).ready(function(){
 	login.on("click",function(e){
 		var userval=$("input[name=username]").val();
 		var pwdval=$("input[name=password]").val();
-		if(userval.length>0&&pwdval.length>0){
+		var code=$("input[name='code']").val();
+		var number=$(".number").html();
+		if(userval.length>0&&pwdval.length>0&&code==number){
 			$(".loginForm").trigger("submit");
 			e.preventDefault();
 		}
 	});
+
+
+    $("#code").on("keyup",function(){
+			var code=$("input[name='code']").val();
+		    var number=$(".number").html();
+		    if(code!==number){
+		    	$(".codeTip").attr("src","/images/loginimages/20170217153822.png");
+		    }else{
+		    	$(".codeTip").attr("src","/images/loginimages/20170217153654.png");
+		    }
+			  // $.ajax({
+			  // 	method:"POST",
+			  // 	url:"/code",
+			  // 	data:{code:code,number:number},
+			  // 	success:function(data){
+			  // 		if (data.flag=="true") {
+			  // 			$(".codeTip").attr("src","./images/loginimages/20170217153654.png");
+			  // 		}else{
+			  // 			$(".codeTip").attr("src","./images/loginimages/20170217153822.png");
+			  // 		}
+			  // 	}
+			  // });
+		});
+
 	$("input[name='username']").on("keyup",function(){
 		var val=$(this).val();
 		if(val&&val.length>0){
@@ -79,5 +105,15 @@ $(document).ready(function(){
                }
 			});
 		}
+	});
+
+	$(".number").on("click",function(){
+		$.ajax({
+			method:"POST",
+			url:"/getCode",
+			success:function(data){
+				$(".number").text(data.num);
+			}
+		});
 	});
 });

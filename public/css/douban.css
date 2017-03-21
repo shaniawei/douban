@@ -138,8 +138,23 @@
       margin-bottom: 5px;
       outline: none;
    }
-   .usernameTip{
-      /*display: inline-block;*/
+   #code{
+      width:130px;
+   }
+   .number{
+      display: inline-block;
+      vertical-align: top;
+      border:1px solid #999;
+      background-image: url("/images/code.jpg");
+      width:113px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      cursor: pointer;
+   }
+   .codeTip{
+      margin-left: -160px;
+      vertical-align: middle;
    }
    #password{
       padding-right: 40px;

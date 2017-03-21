@@ -80,8 +80,8 @@
     <div class="center-left">
      <h2><%= doc.title %></h2>
      <div class="author">
-      <a id="headpic" href=""><img src=<%= asd.img %> /></a>
-      <a href=""><%= asd.username %></a>
+      <a id="headpic" href="/personal"><img src=<%= asd.img %> /></a>
+      <a href="/personal"><%= asd.username %></a>
       <span><%= doc.createDateFormated %></span>
      </div>
      <div class="content">
@@ -182,8 +182,8 @@
     <div class="center-right">
      <div class="one">
       <div class="word">
-       <span><a href=""><%= asd.username %></a>(北京)</span>
-       <p><%= asd.reserve %></p>
+       <span><a href="/personal"><%= asd.username %></a>(北京)</span>
+       <p><% if(asd.reserve){ %><%= asd.reserve %><% } %></p>
       </div>
       <div class="pichead">
        <a href=""><img src=<%= asd.img %> /></a>
