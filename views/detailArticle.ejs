@@ -32,7 +32,7 @@
        <li class="boxla01">
         <a href="">下载豆瓣客户端</a>
         <div class="box1">
-         <img src="/images/displayimage/20170207221021.png">
+         <img dataSrc="/images/displayimage/20170207221021.png">
          <span><a class="no-hover" href="">Iphone </a>·<a class="no-hover" href=""> Android</a></span>
         </div>
        </li>
@@ -42,7 +42,7 @@
         <a id="boxclick"><%= asd.username %>的帐号</a>
         <div class="box2">
          <ul>
-          <li><a href="/personal">个人主页</a></li>
+          <li><a href='<%= "/personal/"+asd._id %>'>个人主页</a></li>
           <li><a href="">我的订单</a></li>
           <li><a href="">我的钱包</a></li>
           <li><a href="">帐号管理</a></li>
@@ -67,11 +67,11 @@
       </div>
      </div>
      <div class="left">
-      <a href="/success"><img src="/images/displayimage/title.png" /></a>
+      <a href="/success"><img dataSrc="/images/displayimage/title.png" /></a>
      </div>
      <div class="right">
       <form method="" action="">
-       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img src="/images/displayimage/search.png"></a>
+       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img dataSrc="/images/displayimage/search.png"></a>
       </form>
      </div>
     </div>
@@ -80,8 +80,8 @@
     <div class="center-left">
      <h2><%= doc.title %></h2>
      <div class="author">
-      <a id="headpic" href="/personal"><img src=<%= asd.img %> /></a>
-      <a href="/personal"><%= asd.username %></a>
+      <a id="headpic" href="/personal"><img dataSrc=<%= doc.author.img %> /></a>
+      <a href="<%= '/personal/'+doc.author._id %>"><%= doc.author.username %></a>
       <span><%= doc.createDateFormated %></span>
      </div>
      <div class="content">
@@ -112,18 +112,18 @@
        <div class="groom">
         <a id="groomword" href="">推荐130</a>
         <div class="triggle">
-         <img id="trigg" src="/images/displayimage/20170215193605.png">
+         <img id="trigg" dataSrc="/images/displayimage/20170215193605.png">
          <div class="box3">
           <div class="weixin">
-           <img src="/images/displayimage/20170215193929.png" /><span>微信扫码</span><br>
-           <img src="/images/displayimage/20170215194037.png" />
+           <img dataSrc="/images/displayimage/20170215193929.png" /><span>微信扫码</span><br>
+           <img dataSrc="/images/displayimage/20170215194037.png" />
           </div>
           <div class="other">
            <ul>
-            <li><a href=""><img src="/images/displayimage/20170215193943.png" />新浪微博</a></li>
-            <li><a href=""><img src="/images/displayimage/20170215194003.png" />QQ好友</a></li>
-            <li><a href=""><img src="/images/displayimage/20170215194015.png" />QQ空间</a></li>
-            <li><a href=""><img src="/images/displayimage/20170215194024.png" />加入豆列</a></li>
+            <li><a href=""><img dataSrc="/images/displayimage/20170215193943.png" />新浪微博</a></li>
+            <li><a href=""><img dataSrc="/images/displayimage/20170215194003.png" />QQ好友</a></li>
+            <li><a href=""><img dataSrc="/images/displayimage/20170215194015.png" />QQ空间</a></li>
+            <li><a href=""><img dataSrc="/images/displayimage/20170215194024.png" />加入豆列</a></li>
            </ul>
           </div>
          </div>
@@ -142,7 +142,7 @@
       </div>
       <div class="comment-content">
        <div class="pict">
-        <a href=""><img src="/images/displayimage/20170215204403.png"></a>
+        <a href=""><img dataSrc="/images/displayimage/20170215204403.png"></a>
        </div>
        <div class="words">
         <span>2017-02-09 10:32:12 <a href="">雁小山</a> (生命的每一天都不可复得)</span><br>
@@ -182,21 +182,21 @@
     <div class="center-right">
      <div class="one">
       <div class="word">
-       <span><a href="/personal"><%= asd.username %></a>(北京)</span>
-       <p><% if(asd.reserve){ %><%= asd.reserve %><% } %></p>
+       <span><a href="<%= '/personal/'+doc.author._id %>"><%= doc.author.username %></a>(北京)</span>
+       <p><% if(doc.author.reserve){ %><%= doc.author.reserve %><% } %></p>
       </div>
       <div class="pichead">
-       <a href=""><img src=<%= asd.img %> /></a>
+       <a href=""><img dataSrc=<%= doc.author.img %> /></a>
       </div>
       <div class="follow">
-       <span>关注此人 <img src="/images/displayimage/add.jpg"></span>
+       <span>关注此人 <img dataSrc="/images/displayimage/add.jpg"></span>
       </div>
       <div class="number">
        <span>666人</span>
       </div>
      </div>
      <div class="two1">
-      <span class="stitle"><%= asd.username %>的最新日记……</span><span>(<a href="">全部</a>)</span><br>
+      <span class="stitle"><%= doc.author.username %>的最新日记……</span><span>(<a href="">全部</a>)</span><br>
       <a href=""><%= doc.title %> </a>
       <span class="diary">(7人喜欢)</span>
      </div>
@@ -253,7 +253,7 @@
         <span> (1人关注)</span>
        </li>
       </ul>
-      <a href="" id="pic"><img src="/images/displayimage/20170209191143.png"></a>
+      <a href="" id="pic"><img dataSrc="/images/displayimage/20170209191143.png"></a>
      </div>
     </div>
    </div>
@@ -276,5 +276,23 @@
     </div>
    </div>
   </div>
+  <script type="text/javascript">
+    var clientHeight=document.documentElement.clientHeight||document.body.clientHeight;
+   
+    function foo(){
+       var pic=document.getElementsByTagName("img");
+       var len=pic.length;
+      for(var i=0;i<len;i++){
+      if (!pic[i].hasShown) {
+        if (pic[i].getBoundingClientRect().top<clientHeight) {
+          pic[i].src=pic[i].getAttribute('dataSrc');
+          pic[i].hasShown=true;
+        }
+      }
+    }
+    }
+    window.onscroll=foo;
+    foo();
+  </script>
  </body>
 </html>

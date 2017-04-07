@@ -164,4 +164,32 @@ $(document).ready(function(){
   	   });
   });
 
+  var pageX,pageY,t,left,temp,flag;
+  $(".upload").on("mousedown",function(e){
+       
+       pageX=e.pageX;
+       pageY=e.pageY;
+       temp=$(this).position();
+       t=temp.top;
+       left=temp.left;console.log(temp)
+       flag=true;
+
+  })
+  $(document).on("mousemove",function(e){
+       if (flag) {
+          $(".upload").css({"left":e.pageX-pageX+left,"top":e.pageY-pageY+t})
+       }
+  }).on("mouseup",function(){
+      flag=false;
+  })
+
+
+  // $("#submitbox").click(function(e){
+  //     $.ajax({
+  //     	method:"POST",
+  //     	url:"/introduce",
+  //     	data:{into:$("#inputbox").val()}
+  //     })
+  // })
+
 });

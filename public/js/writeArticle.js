@@ -55,6 +55,7 @@ $(document).ready(function(){
 		inputval=$("input[name='tags']").val();
 		inputvalarr=inputval.split(";");
 		inputvalarr.splice(inputvalarr.length-1,1);
+		if(event.tagName=="A"){
 		if (inputvalarr.length<5) {
 		   $("input[name='tags']").val(inputval+eventval+";");
 		   e.preventDefault();
@@ -62,5 +63,6 @@ $(document).ready(function(){
 			alert("标签不宜过多哦~");
 			e.preventDefault();
 		}
+	}
 	});
 });

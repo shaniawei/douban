@@ -32,7 +32,7 @@
        <li class="boxla01">
         <a href="">下载豆瓣客户端</a>
         <div class="box1">
-         <img src="/images/image/20170207221021.png">
+         <img dataSrc="/images/image/20170207221021.png">
          <span><a class="no-hover" href="">Iphone </a>·<a class="no-hover" href=""> Android</a></span>
         </div>
        </li>
@@ -42,7 +42,7 @@
         <a id="boxclick"><%= asd.username %>的账号</a>
         <div class="box2">
          <ul>
-          <li><a href="/personal">个人主页</a></li>
+          <li><a href='<%= "/personal/"+asd._id %>'>个人主页</a></li>
           <li><a href="">我的订单</a></li>
           <li><a href="">我的钱包</a></li>
           <li><a href="">帐号管理</a></li>
@@ -67,11 +67,11 @@
       </div>
      </div>
      <div class="left">
-      <a href="/success"><img src="/images/image/title.png" /></a>
+      <a href="/success"><img dataSrc="/images/image/title.png" /></a>
      </div>
      <div class="right">
       <form method="" action="">
-       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img src="/images/image/search.png"></a>
+       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img dataSrc="/images/image/search.png"></a>
       </form>
      </div>
     </div>
@@ -80,19 +80,19 @@
     <div class="center-left">
      <div class="center-left-top">
       <ul>
-       <li><img src="/images/image/20170209125256.png" /><a href="">说句话</a></li>
-       <li><img src="/images/image/20170209125313.png" /><a href="">发照片</a></li>
-       <li><img src="/images/image/20170209125326.png" /><a href="">推荐网页</a></li>
-       <li><img src="/images/image/20170209125335.png" /><a href="/writeArticle">写日记</a></li>
-       <li><img src="/images/image/20170209125351.png" /><a href="">发布东西</a></li>
+       <li><img dataSrc="/images/image/20170209125256.png" /><a href="">说句话</a></li>
+       <li><img dataSrc="/images/image/20170209125313.png" /><a href="">发照片</a></li>
+       <li><img dataSrc="/images/image/20170209125326.png" /><a href="">推荐网页</a></li>
+       <li><img dataSrc="/images/image/20170209125335.png" /><a href="/writeArticle">写日记</a></li>
+       <li><img dataSrc="/images/image/20170209125351.png" /><a href="">发布东西</a></li>
        <li><a id="first" href="">首页设置</a></li>
       </ul>
      </div>
      <div class="ss">
       <input type="text" name="share" placeholder="分享生活点滴…">
       <div class="pictopic">
-       <a href="" title="可传多张照片"><img src="/images/image/20170209125434.png" /></a>
-       <a href="" title="添加话题"><img src="/images/image/20170209125448.png" /></a>
+       <a href="" title="可传多张照片"><img dataSrc="/images/image/20170209125434.png" /></a>
+       <a href="" title="添加话题"><img dataSrc="/images/image/20170209125448.png" /></a>
       </div>
      </div>
      <div class="addtopic"></div>
@@ -102,11 +102,11 @@
         <% docs.forEach(function(doc){ %>
         <div class="personal">
        <div class="personal-left">
-        <a href="/personal" title="<%= doc.title %>"><img src="<%= doc.author.img %>" /></a>
+        <a href='<%= "/personal/"+doc.author._id %>' title="<%= doc.title %>"><img dataSrc="<%= doc.author.img %>" /></a>
        </div>
        <div class="personal-right">
         <div class="personal-right-top">
-         <a href="/personal"><%= doc.author.username %> </a><span>的日记:</span>
+         <a href='<%= "/personal/"+doc.author._id %>'><%= doc.author.username %> </a><span>的日记:</span>
         </div>
         <div class="personal-right-con">
          <div class="personal-right-content">
@@ -125,7 +125,7 @@
 
       <!-- <div class="personal">
        <div class="personal-left">
-        <a href="" title="张秋寒"><img src="/images/image/20170209194426.png" /></a>
+        <a href="" title="张秋寒"><img dataSrc="/images/image/20170209194426.png" /></a>
        </div>
        <div class="personal-right">
         <div class="personal-right-top">
@@ -145,7 +145,7 @@
 
       <div class="personal">
        <div class="personal-left">
-        <a href="" title="Eve"><img src="/images/image/20170209225109.png" /></a>
+        <a href="" title="Eve"><img dataSrc="/images/image/20170209225109.png" /></a>
        </div>
        <div class="personal-right">
         <div class="personal-right-top">
@@ -157,7 +157,7 @@
           <p>爵士乐可以称得上是“美国的古典乐” (America's classical music)。比起欧洲严谨、精致的古典乐，爵士乐要自由狂放得多。起源于十九世纪末的美国城镇，爵士乐在二十世纪逐渐迁徙到了大都市...</p>
          </div>
          <div class="picture">
-          <a href=""><img src="/images/image/20170209225338.png"></a>
+          <a href=""><img dataSrc="/images/image/20170209225338.png"></a>
          </div>
         </div>
         <div class="personal-right-footer">
@@ -168,7 +168,7 @@
 
       <div class="personal">
        <div class="personal-left">
-        <a href="" title="四月"><img src="/images/image/20170209231502.png" /></a>
+        <a href="" title="四月"><img dataSrc="/images/image/20170209231502.png" /></a>
        </div>
        <div class="personal-right">
         <div class="personal-right-top">
@@ -177,10 +177,10 @@
         <div class="personal-right-con">
          <div class="personal-right-content">
           <ul>
-           <li><a href=""><img src="/images/image/20170209231824.png" /></a></li>
-           <li><a href=""><img src="/images/image/20170209231842.png" /></a></li>
-           <li><a href=""><img src="/images/image/20170209231859.png" /></a></li>
-           <li><a href=""><img src="/images/image/20170209231919.png" /></a></li>
+           <li><a href=""><img dataSrc="/images/image/20170209231824.png" /></a></li>
+           <li><a href=""><img dataSrc="/images/image/20170209231842.png" /></a></li>
+           <li><a href=""><img dataSrc="/images/image/20170209231859.png" /></a></li>
+           <li><a href=""><img dataSrc="/images/image/20170209231919.png" /></a></li>
           </ul>
           <h5><a href="">蓝色的台湾</a></h5>
           <div class="liking">
@@ -258,12 +258,12 @@
         <a href="">> 申请创建小站</a>
        </li>
       </ul>
-      <a href="" id="pic"><img src="/images/image/20170209191143.png"></a>
+      <a href="" id="pic"><img dataSrc="/images/image/20170209191143.png"></a>
      </div>
      <div class="two">
       <span class="stitle">热门活动……</span><span>(<a href="">换一个</a>)</span><br>
       <p><span class="brand">品牌 </span><a href="" id="brand">#给老爸支招讨好老妈# 急在线等！</a></p>
-      <a href="" id="pic" class="explain"><img src="/images/image/20170209192424.png"></a><br>
+      <a href="" id="pic" class="explain"><img dataSrc="/images/image/20170209192424.png"></a><br>
       <span class="time">时间：1月28日-2月10日</span><br>
       <span class="time">参加：99</span><br>
       <a href="" id="more">>更多线上活动</a>
@@ -289,5 +289,23 @@
     </div>
    </div>
   </div>
+  <script type="text/javascript">
+    var clientHeight=document.documentElement.clientHeight||document.body.clientHeight;
+   
+    function foo(){
+       var pic=document.getElementsByTagName("img");
+       var len=pic.length;
+      for(var i=0;i<len;i++){
+      if (!pic[i].hasShown) {
+        if (pic[i].getBoundingClientRect().top<clientHeight) {
+          pic[i].src=pic[i].getAttribute('dataSrc');
+          pic[i].hasShown=true;
+        }
+      }
+    }
+    }
+    window.onscroll=foo;
+    foo();
+  </script>
  </body>
 </html>

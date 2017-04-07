@@ -7,7 +7,7 @@
   <script type="text/javascript" rel="stylesheet" src="/js/jquery-1.12.2.js"></script>
   <script type="text/javascript" rel="stylesheet" src="/js/jquery-form.js"></script>
   <script type="text/javascript" rel="stylesheet" src="/js/personal.js"></script>
-  <title><%= asd.username %></title>
+  <title><%= currUser.username %></title>
  </head>
  <body>
   <div class="all">
@@ -34,17 +34,17 @@
        <li class="boxla01">
         <a href="">下载豆瓣客户端</a>
         <div class="box1">
-         <img src="/images/perimage/20170207221021.png">
+         <img dataSrc="/images/perimage/20170207221021.png">
          <span><a class="no-hover" href="">Iphone </a>·<a class="no-hover" href=""> Android</a></span>
         </div>
        </li>
        <li><a href="">提醒</a></li>
        <li><a href="">豆邮</a></li>
        <li class="boxla02">
-        <a id="boxclick"><%= asd.username %>的账号</a>
+        <a id="boxclick"><%= currUser.username %>的账号</a>
         <div class="box2">
          <ul>
-          <li><a href="/personal">个人主页</a></li>
+          <li><a href='<%="/personal/"+currUser._id %>'>个人主页</a></li>
           <li><a href="">我的订单</a></li>
           <li><a href="">我的钱包</a></li>
           <li><a href="">帐号管理</a></li>
@@ -69,11 +69,11 @@
       </div>
      </div>
      <div class="left">
-      <a href="/success"><img src="/images/perimage/title.png" /></a>
+      <a href="/success"><img dataSrc="/images/perimage/title.png" /></a>
      </div>
      <div class="right">
       <form method="" action="">
-       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img src="/images/perimage/search.png"></a>
+       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img dataSrc="/images/perimage/search.png"></a>
       </form>
      </div>
     </div>
@@ -83,8 +83,8 @@
     <div class="center-left">
      <div class="center-left-top">
       <div class="center-left-top-left">
-       <a href="/personal" id="headpic">
-         <img class="authorImg" src="<%= asd.img %>" >
+       <a href="<%= '/personal/'+asd._id %>" id="headpic">
+         <img class="authorImg" dataSrc="<%= asd.img %>" >
        </a>
       </div>
       <div class="center-left-top-right">
@@ -105,7 +105,7 @@
      </div>
      <div class="list">
       <ul>
-       <li><a href="/personal">我的主页</a></li>
+       <li><a href="<%= '/personal/'+asd._id %>">我的主页</a></li>
        <li><a href="">广播</a></li>
        <li><a href="">相册</a></li>
        <li><a href="">日记</a></li>
@@ -133,7 +133,7 @@
       <div class="diary">
        <h4>我的日记……</h4><span>(<a href="">全部</a>)</span>
        <div class="write">
-        <a href="/writeArticle"><img src="/images/perimage/add.jpg"><span>写日记</span></a>
+        <a href="/writeArticle"><img dataSrc="/images/perimage/add.jpg"><span>写日记</span></a>
        </div>
       </div>
       <div class="detaildiary">
@@ -150,10 +150,10 @@
       <div class="diary">
        <h4>我的相册……</h4><span>(<a href="">创建0 </a> · <a href=""> 关注0</a>)</span>
        <div class="write">
-        <a href=""><img src="/images/perimage/add.jpg"><span>新建相册</span></a>
+        <a href=""><img dataSrc="/images/perimage/add.jpg"><span>新建相册</span></a>
        </div>
        <div class="write" id="release">
-        <a href=""><img src="/images/perimage/add.jpg"><span>发照片</span></a>
+        <a href=""><img dataSrc="/images/perimage/add.jpg"><span>发照片</span></a>
        </div>
       </div>
       <div class="detaildiary">
@@ -173,7 +173,7 @@
     <div class="center-right">
      <div class="one">
       <div class="pichead">
-         <img class="authorImg" src="<%= asd.img %>" >
+         <img class="authorImg" dataSrc="<%= asd.img %>" >
       </div>
       <div class="word">
        <span>常居:<a href="">湖南长沙</a></span><br>
@@ -239,11 +239,12 @@
      </p>
     </div>
    </div>
+   
    <div class="upload">
    <div class="upload-center">
     <div class="upload-title">
      <span>上传/修改头像</span>
-     <img id="cha" src="/images/wimage/20170310175400.jpg">
+     <img id="cha" dataSrc="/images/wimage/20170310175400.jpg">
     </div>
     <div class="carry">
      <span>将图片拖到这里<br>或</span><br>
@@ -266,7 +267,7 @@
    <div class="introduceboxcontent">
     <div class="boxtitle">
      <span>更新自我介绍</span>
-     <img id="close" src="/images/wimage/20170310175400.jpg">
+     <img id="close" dataSrc="/images/wimage/20170310175400.jpg">
     </div>
      <form method="POST" action="/introduce">
        <textarea id="inputbox" name="introduce"></textarea><br>
@@ -275,5 +276,23 @@
      </div>
    </div>
   </div>
+  <script type="text/javascript">
+    var clientHeight=document.documentElement.clientHeight||document.body.clientHeight;
+   
+    function foo(){
+       var pic=document.getElementsByTagName("img");
+       var len=pic.length;
+      for(var i=0;i<len;i++){
+      if (!pic[i].hasShown) {
+        if (pic[i].getBoundingClientRect().top<clientHeight) {
+          pic[i].src=pic[i].getAttribute('dataSrc');
+          pic[i].hasShown=true;
+        }
+      }
+    }
+    }
+    window.onscroll=foo;
+    foo();
+  </script>
  </body>
 </html>

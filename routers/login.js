@@ -29,24 +29,29 @@ router.get("/success",function(req,res){   //
        res.render("success",{asd:req.session.user,docs:docs});
    })
 });
-
-router.get("/personal",function(req,res){   //个人主页
+var count=0
+router.get("/personal/:id",function(req,res){   //个人主页
    // ArticleModel.findOne({_id:req.params.id},function(err,doc){
    //  doc.createDateFormated=utils.formateDate(doc.createDate)
    //      res.render("personal",{asd:req.session.user,doc:doc});
    //   });
-   ArticleModel.find({author:req.session.user._id},function(err,docs){
-       if(err){
-          docs="";
+   ArticleModel.find({author:req.params.id}).sort("-createDate").populate(["author"]).exec(function(err,docs){
+       if(err||docs.length==0){
+          UserModel.findOne({_id:req.params.id},function(err,au){
+             res.render('personal',{asd:au,docs:[]})
+          })
+          return 
        }
        docs.forEach(function(doc){
        doc.createDateFormated=utils.formateDate(doc.createDate);
        });
-       
-       res.render("personal",{asd:req.session.user,docs:docs});
+       res.render("personal",{currUser:req.session.user,asd:docs[0].author,docs:docs});
    })
    
 });
+
+
+
 
 // docs=[{title:"",content:"",tags:""},{},{}]
 

@@ -32,7 +32,7 @@
        <li class="boxla01">
         <a href="">下载豆瓣客户端</a>
         <div class="box1">
-         <img src="/images/wimage/20170207221021.png">
+         <img dataSrc="/images/wimage/20170207221021.png">
          <span><a class="no-hover" href="">Iphone </a>·<a class="no-hover" href=""> Android</a></span>
         </div>
        </li>
@@ -42,7 +42,7 @@
         <a id="boxclick"><%= asd.username %>的账号</a>
         <div class="box2">
          <ul>
-          <li><a href="/personal">个人主页</a></li>
+          <li><a href='<%= "/personal/"+asd._id %>'>个人主页</a></li>
           <li><a href="">我的订单</a></li>
           <li><a href="">我的钱包</a></li>
           <li><a href="">帐号管理</a></li>
@@ -67,11 +67,11 @@
       </div>
      </div>
      <div class="left">
-      <a href="/success"><img src="/images/wimage/title.png" /></a>
+      <a href="/success"><img dataSrc="/images/wimage/title.png" /></a>
      </div>
      <div class="right">
       <form method="" action="">
-       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img src="/images/wimage/search.png"></a>
+       <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img dataSrc="/images/wimage/search.png"></a>
       </form>
      </div>
     </div>
@@ -180,7 +180,7 @@
    <div class="upload-center">
     <div class="upload-title">
      <span>添加图片</span>
-     <img id="cha" src="/images/wimage/20170310175400.jpg">
+     <img id="cha" dataSrc="/images/wimage/20170310175400.jpg">
     </div>
     <div class="carry">
      <span>将图片文件拖到这里<br>或</span><br>
@@ -196,5 +196,23 @@
     </div>
    </div>
   </div>
+  <script type="text/javascript">
+    var clientHeight=document.documentElement.clientHeight||document.body.clientHeight;
+   
+    function foo(){
+       var pic=document.getElementsByTagName("img");
+       var len=pic.length;
+      for(var i=0;i<len;i++){
+      if (!pic[i].hasShown) {
+        if (pic[i].getBoundingClientRect().top<clientHeight) {
+          pic[i].src=pic[i].getAttribute('dataSrc');
+          pic[i].hasShown=true;
+        }
+      }
+    }
+    }
+    window.onscroll=foo;
+    foo();
+  </script>
  </body>
 </html>
