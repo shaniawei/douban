@@ -2,6 +2,13 @@
 	margin:0px;
 	padding:0px;
 }
+body{
+	min-width: 990px;
+	position: relative;
+}
+img{
+	border:0px;
+}
 .header-top{
 	background-color: #545652;
 	padding:5px;
@@ -101,7 +108,12 @@
 }
 .header-content{
 	background-color: #EDF4ED;
-	padding:20px 200px;
+	padding:20px 0px;
+	
+}
+.header-content-center{
+	width: 950px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 .main{
@@ -139,6 +151,7 @@
 .left a img{
 	width: 140px;
 	height: 45px;
+	border:0px;
 }
 .right form input{
 	width: 240px;
@@ -153,7 +166,8 @@
 	margin-top: 5px;
 }
 .center{
-	margin:40px 200px 30px 200px;
+	width: 950px;
+	margin:40px auto 30px auto;
 }
 .center a{
 	text-decoration: none;
@@ -239,12 +253,13 @@ h2{
 	margin-top: 7px;
 	color: #ccc;
 	font-size: 14px;
-}
+}  
 .oftentag-right table tr td{
 	display: inline-block;
 	padding:3px 6px;
 	vertical-align: top;
 }
+
 .release{
 	overflow: hidden;
 	margin-bottom: 50px;
@@ -312,6 +327,7 @@ h2{
 .upload-title img{
 	float: right;
 	cursor: pointer;
+	border:0px;
 }
 .carry{
 	box-sizing: border-box;
@@ -366,7 +382,8 @@ h2{
 	margin-right: 15px;
 }
 .footer{
-	margin:0px 200px 20px 200px;
+	width: 950px;
+	margin:0px auto 20px auto;
 }
 .footer a{
 	text-decoration: none;

@@ -2,8 +2,9 @@
 	padding:0px;
 	margin:0px;
 }
-.all{
-	margin:30px 200px;
+body{
+	min-width: 950px;
+	position: relative;
 }
 a{
 	text-decoration: none;
@@ -12,11 +13,17 @@ a{
 	display: inline-block;
 }
 .header{
-	margin-bottom: 30px;
+	margin:50px auto 30px auto;
+	width: 950px;
 }
 .header a img{
 	width: 150px;
     height: 40px; 
+    border:0px;
+}
+.center{
+	width: 950px;
+	margin: 0 auto;
 }
 .title h2{
 	color: #494949;
@@ -94,6 +101,7 @@ a{
 	width: 16px;
 	height: 16px;
 	margin-right: 15px;
+	border:0px;
 }
 
 .content-right{
@@ -110,13 +118,18 @@ a{
 .content-right p a{
 	color: #666699;
 }
+.footer{
+	width: 950px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 .footer hr{
 	border:1px dashed #DDD;
 }
 .footer-left p{
 	font-size: 13px;
 	color: #9C9999;
-	margin-right: 190px;
+	/*margin-right: 190px;*/
 }
 .footer-right p a:hover{
 	color: #FFF;
@@ -124,6 +137,9 @@ a{
 }
 .footer-left,.footer-right{
 	display: inline-block;
+}
+.footer-right{
+	float: right;
 }
 .usernameTip{
 	display: inline-block;

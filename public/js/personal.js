@@ -20,11 +20,7 @@ $(document).ready(function(){
 			// e.preventDefault();
 		}
 	});
-	$("#logout").on("click",function(e){
-		window.location="../";
-		e.preventDefault();
-		return false;
-	});
+
 	$("#uploadpic").on("click",function(e){
 		var upload=$(".upload").css("display");
 		if (upload=="none") {
@@ -164,23 +160,23 @@ $(document).ready(function(){
   	   });
   });
 
-  var pageX,pageY,t,left,temp,flag;
+  var pageX,pageY,t,left,temp,flag1;
   $(".upload").on("mousedown",function(e){
        
        pageX=e.pageX;
        pageY=e.pageY;
        temp=$(this).position();
        t=temp.top;
-       left=temp.left;console.log(temp)
-       flag=true;
+       left=temp.left;
+       flag1=true;
 
   })
   $(document).on("mousemove",function(e){
-       if (flag) {
+       if (flag1) {
           $(".upload").css({"left":e.pageX-pageX+left,"top":e.pageY-pageY+t})
        }
   }).on("mouseup",function(){
-      flag=false;
+      flag1=false;
   })
 
 

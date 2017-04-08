@@ -12,6 +12,7 @@
   <div class="all">
    <div class="header">
     <div class="header-top">
+     <div class="header-top-center">
      <div class="header-top-left">
       <ul>
        <li><a href="">豆瓣</a></li>
@@ -52,8 +53,10 @@
        </li>
       </ul>
      </div>
+     </div>
     </div>
     <div class="header-content">
+     <div class="header-content-center">
      <div class="main">
       <div class="main-body">
        <ul>
@@ -74,9 +77,11 @@
        <input type="text" name="search" placeholder="搜索你感兴趣的内容和人…"><a href=""><img dataSrc="/images/image/search.png"></a>
       </form>
      </div>
+     </div>
     </div>
    </div>
    <div class="center">
+    <div class="center-content">
     <div class="center-left">
      <div class="center-left-top">
       <ul>
@@ -102,7 +107,7 @@
         <% docs.forEach(function(doc){ %>
         <div class="personal">
        <div class="personal-left">
-        <a href='<%= "/personal/"+doc.author._id %>' title="<%= doc.title %>"><img dataSrc="<%= doc.author.img %>" /></a>
+        <a href='<%= "/personal/"+doc.author._id %>' title="<%= doc.author.username %>"><img dataSrc="<%= doc.author.img %>" /></a>
        </div>
        <div class="personal-right">
         <div class="personal-right-top">
@@ -269,8 +274,10 @@
       <a href="" id="more">>更多线上活动</a>
      </div>
     </div>
+    </div>
    </div>
    <div class="footer">
+    <div class="footer-center">
     <hr>
     <div class="footer-left">
      <p>© 2005－2016 douban.com, all rights reserved北京豆网科技有限公司</p>
@@ -287,6 +294,7 @@
       <a href="">豆瓣广告</a>
      </p>
     </div>
+   </div>
    </div>
   </div>
   <script type="text/javascript">

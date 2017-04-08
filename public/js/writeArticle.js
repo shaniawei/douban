@@ -35,7 +35,7 @@ $(document).ready(function(){
 			$(".upload").css("display","none");
 		}
 	});
-	$("#cha").on("mousemove",function(){
+	$("#cha").on("mouseover",function(){
 		$("#cha").attr("src","/images/wimage/20170310175400.png");
 	});
 	$("#cha").on("mouseout",function(){

@@ -2,6 +2,13 @@
 	margin:0px;
 	padding:0px;
 }
+body{
+	min-width: 990px;
+	position: relative;
+}
+img{
+	border:0px;
+}
 .header-top{
 	background-color: #545652;
 	padding:5px;
@@ -101,7 +108,12 @@
 }
 .header-content{
 	background-color: #EDF4ED;
-	padding:20px 200px;
+	padding:20px 0px;
+	
+}
+.header-content-center{
+	width: 950px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 .main{
@@ -139,6 +151,7 @@
 .left a img{
 	width: 140px;
 	height: 45px;
+	border:0px;
 }
 .right form input{
 	width: 240px;
@@ -153,7 +166,8 @@
 	margin-top: 5px;
 }
 .center{
-	margin:50px 200px;
+	margin:50px auto;
+	width: 950px;
 }
 .center-left,.center-right{
 	display:inline-block;
@@ -188,6 +202,7 @@
 .author #headpic img{
 	width: 25px;
 	height: 25px;
+	border:0px;
 }
 .author #headpic:hover{
 	background-color: #fff;
@@ -318,6 +333,7 @@
 }
 .other ul li a img{
 	vertical-align: middle;
+	border:0px;
 }
 .comment{
 	margin-top: 30px;
@@ -492,6 +508,7 @@
 .pichead a img{
 	width: 50px;
 	height: 50px;
+	border:0px;
 }
 .follow{
 	display: inline-block;
@@ -507,6 +524,7 @@
 .follow span img{
 	width: 13px;
 	height: 13px;
+	border:0px;
 }
 .number{
 	display: inline-block;
@@ -555,12 +573,14 @@
 #pic img{
 	width: 300px;
 	height: 80px;
+	border:0px;
 }
 #pic:hover{
 	background-color: #FFF;
 }
 .footer{
-	margin:0px 200px 15px 200px;
+	margin:0px auto 15px auto;
+	width: 950px;
 }
 .footer a{
 	text-decoration: none;

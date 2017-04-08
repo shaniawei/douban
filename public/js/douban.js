@@ -53,21 +53,12 @@ $(document).ready(function(){
 		    var number=$(".number").html();
 		    if(code!==number){
 		    	$(".codeTip").attr("src","/images/loginimages/20170217153822.png");
+		    	$(".codeTip").css("display","inline-block");
 		    }else{
 		    	$(".codeTip").attr("src","/images/loginimages/20170217153654.png");
+		    	$(".codeTip").css("display","inline-block");
 		    }
-			  // $.ajax({
-			  // 	method:"POST",
-			  // 	url:"/code",
-			  // 	data:{code:code,number:number},
-			  // 	success:function(data){
-			  // 		if (data.flag=="true") {
-			  // 			$(".codeTip").attr("src","./images/loginimages/20170217153654.png");
-			  // 		}else{
-			  // 			$(".codeTip").attr("src","./images/loginimages/20170217153822.png");
-			  // 		}
-			  // 	}
-			  // });
+			
 		});
 
 	$("input[name='username']").on("keyup",function(){
@@ -81,8 +72,10 @@ $(document).ready(function(){
                success:function(wmy,resText,jqXHR){  //只有等后端的数据返回的时候，这个函数才会执行
                    if(wmy.flag=="true"){
                    	$(".usernameTip").attr("src","./images/loginimages/20170217153654.png");
+                   	$(".usernameTip").css("display","inline-block");
                    }else{
                    	$(".usernameTip").attr("src","./images/loginimages/20170217153822.png");
+                   	$(".usernameTip").css("display","inline-block");
                    }
                }
 			});
@@ -99,8 +92,10 @@ $(document).ready(function(){
                success:function(wmy,resText,jqXHR){  //只有等后端的数据返回的时候，这个函数才会执行
                    if(wmy.flag=="true"){
                    	$(".usernameTip").attr("src","./images/loginimages/20170217153654.png");
+                   	$(".usernameTip").css("display","inline-block");
                    }else{
                    	$(".usernameTip").attr("src","./images/loginimages/20170217153822.png");
+                   	$(".usernameTip").css("display","inline-block");
                    }
                }
 			});

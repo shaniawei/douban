@@ -3,9 +3,20 @@
       margin:0px;
       padding:0px;
    }
+   body{
+   min-width: 950px;
+   position: relative;
+}
+
+.content-center{
+   width: 950px;
+   margin: 0 auto;
+}
    .all-header-top{
-      padding:20px 15%;
+      padding:20px 0px;
       overflow: hidden;
+      width: 950px;
+      margin: 0 auto;
    }
    .all-header-top-right{
       display: inline-block;
@@ -16,6 +27,7 @@
       display: inline-block;
    }
    .all-header-top-right a img{
+      border:0px;
       width: 150px;
       height: 40px;
       vertical-align: middle;
@@ -71,7 +83,7 @@
       background-image: url("../images/1.png");
       background-repeat: no-repeat;
       height: 220px;
-      padding:1px 100px 1px 200px;
+      padding:1px 0px;
    }
    .word{
       display: inline-block;
@@ -102,6 +114,7 @@
    }
    .download img{
       height: 30px;
+      border:0px;
    }
    .box1{
       position: absolute;
@@ -115,6 +128,7 @@
    .box1 img{
       width: 180px;
       height: 180px;
+      border:0px;
    }
    .box1 span{
       font-size: 13px;
@@ -138,6 +152,9 @@
       margin-bottom: 5px;
       outline: none;
    }
+   .usernameTip{
+      display: none;
+   }
    #code{
       width:130px;
    }
@@ -155,6 +172,7 @@
    .codeTip{
       margin-left: -160px;
       vertical-align: middle;
+      display: none;
    }
    #password{
       padding-right: 40px;
@@ -227,21 +245,26 @@
    }
    .share img{
       width: 13px;
+      border:0px;
       height: 13px;
    }
    .ad{
-      margin: 30px 200px 10px 200px;
+      margin: 30px auto 10px auto;
+      width: 950px;
    }
    .ad a,img{
       display: inline-block;
+      border:0px;
    }
    .ad a img{
       width: 950px;
+      border:0px;
       height: 90px;
    }
    .content1{
-      margin: 5px 200px 10px 200px;
+      margin: 5px auto 10px auto;
       height: 530px;
+      width: 950px;
       overflow: hidden;
    }
    .titleleft .title1{
@@ -311,6 +334,7 @@
    .picview img{
       width: 170px;
       height: 170px;
+      border:0px;
    }
    .picview span{
       font-size: 12px;
@@ -331,6 +355,7 @@
       width: 260px;
       height: 120px;
       margin-bottom: 12px;
+      border:0px;
    }
    .right-table{
       margin-top: 14px;
@@ -356,7 +381,7 @@
    }
    .content2{
       background-color: #F7F7F7;
-      padding:0px 200px 40px 200px;
+      padding-bottom: 40px ;
       overflow: hidden;
    }
    .main-all{
@@ -382,6 +407,7 @@
    .view img{
       width: 100px;
       height: 148px;
+      border:0px;
    }
    .moviename{
       display: inline-block;
@@ -408,6 +434,7 @@
    .grade img{
       width: 10px;
       height: 10px;
+      border:0px;
    }
    .buy{
       display: inline-block;
@@ -494,8 +521,10 @@
       margin-top: 30px;
    }
    .content3{
-      padding:0px 200px 20px;
+      padding-bottom: 20px;
       overflow: hidden;
+      width: 950px;
+      margin: 0 auto;
    }
    .group{
       margin-top: 20px;
@@ -515,6 +544,7 @@
    .group ul li a img{
       width: 48px;
       height: 48px;
+      border:0px;
    }
    .wordexplain a:hover{
       background-color:#3377AA; 
@@ -640,6 +670,7 @@
       width: 80px;
       height: 80px;
       margin-bottom: 5px;
+      border:0px;
    }
    #musicname{
       white-space: normal;
@@ -696,6 +727,7 @@
    #cusumer li a img{
       width: 60px;
       height: 60px;
+      border:0px;
    }
    #cusumer .wordexplain{
       width: 180px;
@@ -724,6 +756,7 @@
    .bigpicone a img{
       width: 250px;
       height: 250px;
+      border:0px;
    }
    .picexplain{
       margin-top: 6px;
@@ -768,6 +801,7 @@
    .smallpicone a img{
       width: 110px;
       height: 110px;
+      border:0px;
    }
    #photo li a{
       color: #837960;
@@ -811,6 +845,7 @@
    .viewus img{
       width: 90px;
       height: 90px;
+      border:0px;
    }
    .bigfram{
       margin-top: 17px;
@@ -832,6 +867,7 @@
       width: 250px;
       height: 180px;
       margin-bottom: 40px;
+      border:0px;
    }
    #city li a{
       color: #664433;
@@ -848,6 +884,7 @@
    #weekhot a img{
       width: 70px;
       height: 90px;
+      border:0px;
    }
    #weekexplain a{
       width: 150px;
@@ -870,8 +907,9 @@
       color: #FFF;
    }
    .all-footer{
-      margin:0px 200px;
+      margin:0px auto;
       padding-bottom: 25px;
+      width: 950px;
    }
    .all-footer hr{
       border-style: dashed;

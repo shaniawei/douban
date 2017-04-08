@@ -2,10 +2,21 @@
 	margin:0px;
 	padding:0px;
 }
+body{
+	min-width: 990px;
+	position: relative;
+}
+img{
+	border:0px;
+}
 .header-top{
 	background-color: #545652;
 	padding:5px;
 }
+/*.header-top-center{
+	width: 990px;
+	margin: 0px auto;
+}*/
 .header-top:after{
 	content:".";
 	display: block;
@@ -101,8 +112,13 @@
 }
 .header-content{
 	background-color: #EDF4ED;
-	padding:20px 200px;
+	padding:20px 0px;
 	overflow: hidden;
+	width: 100%;
+}
+.header-content-center{
+    width: 940px;
+    margin: 0 auto;
 }
 .main{
 	float: left;
@@ -139,6 +155,7 @@
 .left a img{
 	width: 140px;
 	height: 45px;
+	border:0px;
 }
 .right form input{
 	width: 240px;
@@ -153,8 +170,13 @@
 	margin-top: 5px;
 }
 .center{
-	margin:50px 200px;
+	margin:50px 0px;
+	width: 100%;
 	overflow: hidden;
+}
+.center-content{
+	width: 940px;
+	margin:0 auto;
 }
 .center-right,.center-left{
 	display: inline-block;
@@ -169,6 +191,7 @@
 	height: 16px;
 	vertical-align: middle;
 	margin-right: 5px;
+	border:0px;
 }
 .center-left-top ul li a{
 	text-decoration: none;
@@ -295,6 +318,7 @@
 .explain img{
 	width:50px;
 	height: 30px;
+	border:0px;
 }
 .brand{
 	font-size: 15px;
@@ -324,6 +348,7 @@
 .personal-left a img{
 	width: 50px;
 	height: 45px;
+	border:0px;
 }
 .personal-right{
 	width: 525px;
@@ -361,6 +386,7 @@
 .picture a img{
 	width: 108px;
 	height: 60px;
+	border:0px;
 }
 .picture a:hover{
 	background-color: #FFF;
@@ -436,7 +462,11 @@
 	background-color: #FFF;
 }
 .footer{
-	margin:0px 200px 50px 200px;
+	margin-bottom: 50px ;
+}
+.footer-center{
+	width: 940px;
+	margin: 0 auto
 }
 .footer a{
 	text-decoration: none;
